@@ -1,0 +1,765 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" type="text/css" href="/DXR.axd?r=1_8,1_10,1_12,1_7,1_1,1_4,1_5,1_3-wI6ef" /><meta charset="utf-8" /><title>
+	Dashboard - Disclosure Compliance
+</title><link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" /><meta name="author" /><link rel="stylesheet" href="../../assets/js/jquery.ui/jquery-ui.css" />
+    
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../favicon.ico" />
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" href="../../assets/css/style.css" /><link rel="stylesheet" href="../../assets/css/print.css" media="print" />
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../assets/plugins/line-icons/line-icons.css" /><link rel="stylesheet" href="../../assets/plugins/font-awesome/css/font-awesome.min.css" /><link rel="stylesheet" href="../../assets/plugins/flexslider/flexslider.css" /><link rel="stylesheet" href="../../assets/plugins/revolution_slider/rs-plugin/css/settings.css" /><link rel="stylesheet" href="../../assets/css/plugins/hover-effect/css/custom-hover-effects.css" /><link rel="stylesheet" href="../../assets/plugins/sky-forms/version-2.0.1/css/custom-sky-forms.css" />
+        
+    <!-- CSS Page Style -->
+    <link rel="stylesheet" href="../../assets/css/pages/profile.css" /><link rel="stylesheet" href="../../assets/css/pages/feature_timeline2.css" />
+
+    <!-- CSS Theme -->    
+    <link id="ctl00_ctl00_style_color" rel="stylesheet" href="../../assets/css/themes/blue.css" />
+
+    <!-- Content Placeholder -->    
+    
+    <link rel="stylesheet" href="/assets/css/table.css"> 
+    <link rel="stylesheet" href="/assets/css/dxoverride.css">
+    <link rel="stylesheet" href="/assets/plugins/scrollbar/src/perfect-scrollbar.css">
+
+    
+    
+
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="../../assets/css/custom.css" /></head>
+<body class="boxed-layout container">
+    <form method="post" action="./default.aspx" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTc5NjQyNzU3Ng9kFgJmD2QWAmYPDxYEHg9fX0FudGlYc3JmVG9rZW4FIGEwYTRkN2NjYzEzNDQ0OTA4ZDE3NzlmZGU5YWNlZGVlHhJfX0FudGlYc3JmVXNlck5hbWVlZBYCAgEPZBYCAgQPZBYCAgIPZBYEAgMPFgIeC18hSXRlbUNvdW50AgoWFGYPZBYCZg8VCQNuZXeAAS9oYW5kbGVyL0ltYWdlSGFuZGxlci5hc2h4P213PTQwJm1oPTQwJmNsaWVudElEPTQwYTlmNDQ4LTE0YTUtNDk0Ni1iOTdkLTI5YzBhMTJiNDhlZCZmaWxlSUQ9ZjNmMmQyNDYtN2M2Yy00MWJlLTg3MGYtNzk3OGY5OGViMmEzBDI1MjMDbmV3JUxvbmcgQmVhY2ggQ29tbXVuaXR5IENvbGxlZ2UgRGlzdHJpY3QEMjUyMwNOZXcUMTMgYnVzaW5lc3MgZGF5cyBhZ2/PAjAxLiBIYXMgdGhlIExvbmcgQmVhY2ggQ29tbXVuaXR5IENvbGxlZ2UgRGlzdHJpY3QgZGlzY2xvc2VkIGFueSBxdWFydGVybHkvbW9udGhseSBmaW5hbmNpYWwgaW5mb3JtYXRpb24gdG8gb3V0c2lkZSBwYXJ0aWVzPw0KVGhlIGFubnVhbCAyMDIzLTI0IENDRlMtMzExIGZpbmFuY2lhbCByZXBvcnQgd2FzIHByZXNlbnRlZCB0byB0aGUgQm9hcmQgb24gT2N0b2JlciA5LCAyMDI0LiAgVGhlIHJlcG9ydCB3YXMgYWxzbyBzdWJtaXR0ZWQgdG8gdGhlIENoYW5jZWxsb3LigJlzIE9mZmljZSBieSB0aGUgT2N0b2JlciAxMCwgMjAyNCBkZWFkbGluZS4gIFRoZSByZXBvcnQgaXMgYXR0YWNoZWQuZAIBD2QWAmYPFQkDbmV3gAEvaGFuZGxlci9JbWFnZUhhbmRsZXIuYXNoeD9tdz00MCZtaD00MCZjbGllbnRJRD00ZGM4MDliZi02ZGQxLTRhMGItYWZlOC0zZjcxODgwZmIwNWMmZmlsZUlEPWQzODQ4ZjA3LWM5Y2QtNGM1My04NTc4LWQ3MGZkMjA5MjU1MAQyNTIyA25ldyVTdWxwaHVyIFNwcmluZ3MgVW5pb24gU2Nob29sIERpc3RyaWN0BDI1MjIDTmV3FDEzIGJ1c2luZXNzIGRheXMgYWdvjgEwOC4gSGFzIHRoZSBTdWxwaHVyIFNwcmluZ3MgVW5pb24gU2Nob29sIERpc3RyaWN0IGV4ZWN1dGVkIGFueSBib25kIGNhbGxzIG9yIHRlbmRlciBvZmZlcnM/DQpTdWxwaHVyIFNwcmluZ3MgaXNzdWVkIGJvbmRzIGFnYWluc3QgQ0ZEIDIwMTktMS4gZAICD2QWAmYPFQkDbmV3gAEvaGFuZGxlci9JbWFnZUhhbmRsZXIuYXNoeD9tdz00MCZtaD00MCZjbGllbnRJRD1kMDg3ODQyNC01MTIwLTRiYTUtOTEyYy0zNGRlZTliOGJjYjImZmlsZUlEPTBmNzRhYjFjLWFlNjgtNDg1MC1iMGFmLWFlMmYwMDhiZGJjNAQyNTIxA25ldxZBY2FkZW15IENoYXJ0ZXIgU2Nob29sBDI1MjEDTmV3FDE0IGJ1c2luZXNzIGRheXMgYWdviQFIYXZlIHlvdSBjb21wbGV0ZWQgdGhlIEFubnVhbCBGaW5hbmNpYWwgSW5mb3JtYXRpb24gYW5kIE9wZXJhdGluZyBkYXRhIGZvciB5b3VyIGRlYnQgaXNzdWFuY2Uocyk/DQoyMDIzLTIwMjQgQXVkaXRlZCBGaW5hbmNpYWwgU3RhdGVtZW50c2QCAw9kFgJmDxUJBmNsb3NlZIABL2hhbmRsZXIvSW1hZ2VIYW5kbGVyLmFzaHg/bXc9NDAmbWg9NDAmY2xpZW50SUQ9NDBhOWY0NDgtMTRhNS00OTQ2LWI5N2QtMjljMGExMmI0OGVkJmZpbGVJRD1mM2YyZDI0Ni03YzZjLTQxYmUtODcwZi03OTc4Zjk4ZWIyYTMEMjUyMAZjbG9zZWQlTG9uZyBCZWFjaCBDb21tdW5pdHkgQ29sbGVnZSBEaXN0cmljdAQyNTIwBkNsb3NlZBQzNiBidXNpbmVzcyBkYXlzIGFnb94BMDcuIEhhcyB0aGUgTG9uZyBCZWFjaCBDb21tdW5pdHkgQ29sbGVnZSBEaXN0cmljdCBhcHByb3ZlZCBhbm51YWwgYWRvcHRlZCBvciB0ZW50YXRpdmUgYnVkZ2V0Pz8NClRoZSAyMDI0LTI1IEFkb3B0ZWQgQnVkZ2V0IHdhcyBhcHByb3ZlZCBieSB0aGUgQm9hcmQgYXQgdGhlaXIgbWVldGluZyBvbiBTZXB0ZW1iZXIgMTEsIDIwMjQuICBUaGUgQWRvcHRlZCBCdWRnZXQgaXMgYXR0YWNoZWQuZAIED2QWAmYPFQkGY2xvc2VkgAEvaGFuZGxlci9JbWFnZUhhbmRsZXIuYXNoeD9tdz00MCZtaD00MCZjbGllbnRJRD04OGViMTgzOS01ZWNkLTQ4ZDYtYWFkMC01NmQ1OTgxOTc3YjUmZmlsZUlEPWViMjAzM2YyLTZjNmYtNGE3OC1hZGZlLTFmZjA3OWI0ZmZlZQQyNTE5BmNsb3NlZCFWYWwgVmVyZGUgVW5pZmllZCBTY2hvb2wgRGlzdHJpY3QEMjUxOQZDbG9zZWQUMzYgYnVzaW5lc3MgZGF5cyBhZ2/2ATA2LiBIYXMgdGhlIFZhbCBWZXJkZSBVbmlmaWVkIFNjaG9vbCBEaXN0cmljdCBwcmVwYXJlZCBhbnkgaW50ZXJpbSBidWRnZXQgcmVwb3J0cywgYWRkaXRpb25hbCBmaW5hbmNpYWwgaW5mb3JtYXRpb24gb3Igb3BlcmF0aW5nIGRhdGE/DQpPdXIgVW5hdWRpdGVkIEFjdHVhbHMgcmVwb3J0IHdhcyBhcHByb3ZlZCBieSBvdXIgQm9hcmQgb2YgRWR1Y2F0aW9uIGF0IHRoZSBTZXB0ZW1iZXIgMTAgcmVndWxhciBib2FyZCBtZWV0aW5nLmQCBQ9kFgJmDxUJBmNsb3NlZIABL2hhbmRsZXIvSW1hZ2VIYW5kbGVyLmFzaHg/bXc9NDAmbWg9NDAmY2xpZW50SUQ9NjBmMTFjZGMtODZmYy00NGQyLTkyY2YtMTA1OTVlNWYxNjVlJmZpbGVJRD1mZjE4MGY3MS1iZTI3LTRmODUtYjM4My02NWM1ODE4ZGUwMjQEMjUxOAZjbG9zZWQZRnVsbGVydG9uIFNjaG9vbCBEaXN0cmljdAQyNTE4BkNsb3NlZBQzNiBidXNpbmVzcyBkYXlzIGFnb8QBMDYuIEhhcyB0aGUgRnVsbGVydG9uIFNjaG9vbCBEaXN0cmljdCBwcmVwYXJlZCBhbnkgaW50ZXJpbSBidWRnZXQgcmVwb3J0cywgYWRkaXRpb25hbCBmaW5hbmNpYWwgaW5mb3JtYXRpb24gb3Igb3BlcmF0aW5nIGRhdGE/DQpZZXMuIFVuYXVkaXRlZCBhY3R1YWxzIHdlcmUgcHJlc2VudGVkIGF0IHRoZSA5LzE3LzIwMjQgQm9hcmQgTWVldGluZ2QCBg9kFgJmDxUJBmNsb3NlZIABL2hhbmRsZXIvSW1hZ2VIYW5kbGVyLmFzaHg/bXc9NDAmbWg9NDAmY2xpZW50SUQ9NjBmMTFjZGMtODZmYy00NGQyLTkyY2YtMTA1OTVlNWYxNjVlJmZpbGVJRD1mZjE4MGY3MS1iZTI3LTRmODUtYjM4My02NWM1ODE4ZGUwMjQEMjUxNwZjbG9zZWQZRnVsbGVydG9uIFNjaG9vbCBEaXN0cmljdAQyNTE3BkNsb3NlZBQzNiBidXNpbmVzcyBkYXlzIGFnb7UBMDEuIEhhcyB0aGUgRnVsbGVydG9uIFNjaG9vbCBEaXN0cmljdCBkaXNjbG9zZWQgYW55IHF1YXJ0ZXJseS9tb250aGx5IGZpbmFuY2lhbCBpbmZvcm1hdGlvbiB0byBvdXRzaWRlIHBhcnRpZXM/DQpZZXMuIFVuYXVkaXRlZCBBY3R1YWxzIHdlcmUgcHJlc2VudGVkIGF0IHRoZSA5LzE3LzIwMjQgQm9hcmQgTWVldGluZ2QCBw9kFgJmDxUJBmNsb3NlZIABL2hhbmRsZXIvSW1hZ2VIYW5kbGVyLmFzaHg/bXc9NDAmbWg9NDAmY2xpZW50SUQ9NGRjODA5YmYtNmRkMS00YTBiLWFmZTgtM2Y3MTg4MGZiMDVjJmZpbGVJRD1kMzg0OGYwNy1jOWNkLTRjNTMtODU3OC1kNzBmZDIwOTI1NTAEMjUxNgZjbG9zZWQlU3VscGh1ciBTcHJpbmdzIFVuaW9uIFNjaG9vbCBEaXN0cmljdAQyNTE2BkNsb3NlZBQzNiBidXNpbmVzcyBkYXlzIGFnb8sBMDYuIEhhcyB0aGUgU3VscGh1ciBTcHJpbmdzIFVuaW9uIFNjaG9vbCBEaXN0cmljdCBwcmVwYXJlZCBhbnkgaW50ZXJpbSBidWRnZXQgcmVwb3J0cywgYWRkaXRpb25hbCBmaW5hbmNpYWwgaW5mb3JtYXRpb24gb3Igb3BlcmF0aW5nIGRhdGE/DQpUaGUgVW5hdWRpdGVkIEFjdHVhbHMgd2FzIHByZXNlbnRlZCB0byB0aGUgQm9hcmQgaW4gU2VwdGVtYmVyLiBkAggPZBYCZg8VCQZjbG9zZWSAAS9oYW5kbGVyL0ltYWdlSGFuZGxlci5hc2h4P213PTQwJm1oPTQwJmNsaWVudElEPTE3M2E4YjczLTVjMGQtNGViYy1iOTk5LTI2ZTJjZDJmZWE0OSZmaWxlSUQ9MGExN2EwZWEtM2M0ZS00NWJmLWJjM2ItNTRhOWU4ZjUzYTA4BDI1MTUGY2xvc2VkJEVzY29uZGlkbyBVbmlvbiBIaWdoIFNjaG9vbCBEaXN0cmljdAQyNTE1BkNsb3NlZBQ1MSBidXNpbmVzcyBkYXlzIGFnb9ABMDYuIEhhcyB0aGUgRXNjb25kaWRvIFVuaW9uIEhpZ2ggU2Nob29sIERpc3RyaWN0IHByZXBhcmVkIGFueSBpbnRlcmltIGJ1ZGdldCByZXBvcnRzLCBhZGRpdGlvbmFsIGZpbmFuY2lhbCBpbmZvcm1hdGlvbiBvciBvcGVyYXRpbmcgZGF0YT8NCkVVSFNEIGFwcHJvdmVkIHRoZWlyIFVuYXVkaXRlZCBBY3R1YWxzIGF0IHRoZWlyIDktMTAtMjQgQm9hcmQgTWVldGluZ2QCCQ9kFgJmDxUJBmNsb3NlZIABL2hhbmRsZXIvSW1hZ2VIYW5kbGVyLmFzaHg/bXc9NDAmbWg9NDAmY2xpZW50SUQ9MTczYThiNzMtNWMwZC00ZWJjLWI5OTktMjZlMmNkMmZlYTQ5JmZpbGVJRD0wYTE3YTBlYS0zYzRlLTQ1YmYtYmMzYi01NGE5ZThmNTNhMDgEMjUxNAZjbG9zZWQkRXNjb25kaWRvIFVuaW9uIEhpZ2ggU2Nob29sIERpc3RyaWN0BDI1MTQGQ2xvc2VkFDUxIGJ1c2luZXNzIGRheXMgYWdvwQEwMS4gSGFzIHRoZSBFc2NvbmRpZG8gVW5pb24gSGlnaCBTY2hvb2wgRGlzdHJpY3QgZGlzY2xvc2VkIGFueSBxdWFydGVybHkvbW9udGhseSBmaW5hbmNpYWwgaW5mb3JtYXRpb24gdG8gb3V0c2lkZSBwYXJ0aWVzPw0KRVVIU0QgYXBwcm92ZWQgdGhlaXIgVW5hdWRpdGVkIEFjdHVhbHMgYXQgdGhlaXIgOS0xMC0yNCBCb2FyZCBNZWV0aW5nZAIHDzwrABwDAA8WAh4PRGF0YVNvdXJjZUJvdW5kZ2QGD2QQFgRmAgECAgIDFgQ8KwAKAQAWAh4PQ29sVmlzaWJsZUluZGV4ZjwrAAoBABYCHwQCATwrAAoBABYCHwQCAjwrAAoBABYCHwQCAw8WBAIBAgECAQIBFgEFiAFEZXZFeHByZXNzLldlYi5BU1B4R3JpZFZpZXcuR3JpZFZpZXdEYXRhQ29sdW1uLCBEZXZFeHByZXNzLldlYi52MTQuMSwgVmVyc2lvbj0xNC4xLjQuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iODhkMTc1NGQ3MDBlNDlhGDwrAAYBBRQrAAJkZBYCAgEPZBYCZg9kFgJmD2QWAmYPZBYCBQtEWE1haW5UYWJsZQ9kFhQFCkRYRGF0YVJvdzAPZBYEBQl0Y2NlbGwwXzAPZBYCZg9kFgJmD2QWAmYPFQIkNDNkYjQxNjMtOWYwNC00NTcxLWJmZWQtZWVmYjI4ODliOWE2C0FBIFRhbSBEZW1vZAUJdGNjZWxsMF8zD2QWAmYPZBYCZg9kFgJmDxUCB3N1Y2Nlc3MGQWN0aXZlZAUKRFhEYXRhUm93MQ9kFgQFCXRjY2VsbDFfMA9kFgJmD2QWAmYPZBYCZg8VAiQ1ZjA1ZDljNy1iYmIyLTRlNDktYWE0Ni0wNTRmYjdmYmVhM2IbQUFBIFVuaWZpZWQgU2Nob29sIERpc3RyaWN0ZAUJdGNjZWxsMV8zD2QWAmYPZBYCZg9kFgJmDxUCBmRhbmdlcghJbmFjdGl2ZWQFCkRYRGF0YVJvdzIPZBYEBQl0Y2NlbGwyXzAPZBYCZg9kFgJmD2QWAmYPFQIkZDA4Nzg0MjQtNTEyMC00YmE1LTkxMmMtMzRkZWU5YjhiY2IyFkFjYWRlbXkgQ2hhcnRlciBTY2hvb2xkBQl0Y2NlbGwyXzMPZBYCZg9kFgJmD2QWAmYPFQIHc3VjY2VzcwZBY3RpdmVkBQpEWERhdGFSb3czD2QWBAUJdGNjZWxsM18wD2QWAmYPZBYCZg9kFgJmDxUCJDMzNTQ5MjlkLTBkMjgtNGI3ZC1hMmQ0LTg2MTA5MWNmMDBiMB1BZGRlbmJyb29rZSBDbGFzc2ljYWwgQWNhZGVteWQFCXRjY2VsbDNfMw9kFgJmD2QWAmYPZBYCZg8VAgZkYW5nZXIISW5hY3RpdmVkBQpEWERhdGFSb3c0D2QWBAUJdGNjZWxsNF8wD2QWAmYPZBYCZg9kFgJmDxUCJDA5ZDMyZDFmLTlkNDQtNDJhYS1hZWYwLTgzNGNiZDFlYzNlMhhBZGVsYW50byBTY2hvb2wgRGlzdHJpY3RkBQl0Y2NlbGw0XzMPZBYCZg9kFgJmD2QWAmYPFQIGZGFuZ2VyCEluYWN0aXZlZAUKRFhEYXRhUm93NQ9kFgQFCXRjY2VsbDVfMA9kFgJmD2QWAmYPZBYCZg8VAiRhYWQ3MGVjYy00NDM1LTRkYjMtODIxZi1jN2VlNjQwYmU0ZjIqQWx1bSBSb2NrIFVuaW9uIEVsZW1lbnRhcnkgU2Nob29sIERpc3RyaWN0ZAUJdGNjZWxsNV8zD2QWAmYPZBYCZg9kFgJmDxUCBmRhbmdlcghJbmFjdGl2ZWQFCkRYRGF0YVJvdzYPZBYEBQl0Y2NlbGw2XzAPZBYCZg9kFgJmD2QWAmYPFQIkNTljMmQ2NGMtN2FmYS00OTBmLWJhNzMtYTZlNmY4MWQ5MjEwJkFsdmlldy1EYWlyeWxhbmQgVW5pb24gU2Nob29sIERpc3RyaWN0ZAUJdGNjZWxsNl8zD2QWAmYPZBYCZg9kFgJmDxUCBmRhbmdlcghJbmFjdGl2ZWQFCkRYRGF0YVJvdzcPZBYEBQl0Y2NlbGw3XzAPZBYCZg9kFgJmD2QWAmYPFQIkODZhNmUzNGEtMDFiMy00NjI3LWEzZmQtYjVkMGQ5ZTJmMmRhHkFsdm9yZCBVbmlmaWVkIFNjaG9vbCBEaXN0cmljdGQFCXRjY2VsbDdfMw9kFgJmD2QWAmYPZBYCZg8VAgZkYW5nZXIISW5hY3RpdmVkBQpEWERhdGFSb3c4D2QWBAUJdGNjZWxsOF8wD2QWAmYPZBYCZg9kFgJmDxUCJGM0MzM4YmUxLWRhYjctNDNjNy1hN2MxLWEzNjgyMjdiMTgyNxxBbmFoZWltIENpdHkgU2Nob29sIERpc3RyaWN0ZAUJdGNjZWxsOF8zD2QWAmYPZBYCZg9kFgJmDxUCBmRhbmdlcghJbmFjdGl2ZWQFCkRYRGF0YVJvdzkPZBYEBQl0Y2NlbGw5XzAPZBYCZg9kFgJmD2QWAmYPFQIkNTE3OWE3YWYtMDY0NS00ZjI4LWI3YmMtOGRmMTVlMmFkMzg0IkFuYWhlaW0gVW5pb24gSGlnaCBTY2hvb2wgRGlzdHJpY3RkBQl0Y2NlbGw5XzMPZBYCZg9kFgJmD2QWAmYPFQIGZGFuZ2VyCEluYWN0aXZlZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUtY3RsMDAkY3RsMDAkY3BoY29udGVudCRjcGhjb250ZW50JGR4Z3ZDbGllbnRzBUBjdGwwMCRjdGwwMCRjcGhjb250ZW50JGNwaGNvbnRlbnQkZHhndkNsaWVudHMkRFhGUkVkaXRvcmNvbDMkREREiUnFhJp44CCwjnSHnJB0EPRes/ZZ/yJP671e0mbBcyA=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=FEgY3lcVpsFG4Ph5UuQyvxsCVG3NMTzhjERPJGQia73FBhrJy9LoKSUSbO-7s2Oayb4dwuDpbYGw4Mq69ZUfrwQBsEbnD6iMmDKBfP5MlGA1&amp;t=638563127773552689" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=W43Ey0GmFlb7MGYP73WR_efSeBLDAh5F8c50qDPXUE6la2klTwaBkTsWTp1U26Q2_wHr0YkuYHK6DrzO70BsamoPK_D6F1iUvWpVQkIGY2frJPXJxJAVOEF1K0dTznFXvzCNKfth3MpkAKPko5uYnZbw7cNd-dAlpVyPHC8ChfUn3ztOZ6CZBIL_8AkWQjs50&amp;t=ffffffffc820c398" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=BX4f2e6CVbo6TxGvvPjn7y9wuGKTFHoInYytJ15H3Mg_SXucNTmWFL6u1u7qNLP7bAwogKgW1i-P6f-tHMIow-TvIaJsrUN7RSoaLDdRI3XYq3tLGBqYWFBeWYjvYQDBw7MALrcKb_fXHa_SMUfXeyOQm66TZTyLYmQ45fS_IUpMn4bRw-rbpckD1toquOdq0&amp;t=ffffffffc820c398" type="text/javascript"></script>
+<script src="../../Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery-ui-1.8.24.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E80D927C" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAMqm0m5vuN5HIL8LXQiT+ykQHTKQWeFJKAoODFNAdpKFRJnSRyJKV86AMxuI01/ZDpbmQN+QRybT7X+awlgKJtMkIXWALlKP0iYjG2MJVqYWQ==" />
+</div>
+
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+
+
+    <div class="wrapper">
+        <!--=== Header ===-->    
+        <div class="header">
+
+    
+            <!-- Navbar -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="fa fa-bars"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">
+                            <img id="logo-header" src="/assets/img/logo/logo.png" alt="Logo" width="230" >
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div >
+                    
+    
+    <ul class="nav navbar-nav noprint">
+        <!-- Clients -->
+        <li id="home" class="active">
+            <a href="clients.aspx">Clients</a>        
+        </li>
+        <!-- End Clients -->
+       
+        
+        <!-- Log Out -->                        
+        <li id="Li1">
+            <a href="/portal/logout.aspx"><i class="fa fa-user"></i><span> Chris</span>  (Log Out)</a>
+        </li>
+        <!-- End Log Out -->                                                
+    </ul>
+
+                    </div><!--/navbar-collapse-->
+                </div>    
+            </div>            
+            <!-- End Navbar -->
+        </div>
+        <!--=== End Header ===-->    
+
+        
+
+
+        
+
+
+
+        
+
+    <!--=== Profile ===-->
+    <div class="profile">	
+        <div class="container content">
+        	<div class="row">
+                <!--Left Sidebar-->
+                <div class="col-xs-3 md-margin-bottom-40 animated fadeInLeft noprint">
+                    <h2><i class="fa fa-user"></i> Welcome Chris</h2>
+
+                    <ul class="list-group sidebar-nav-v1 margin-bottom-40" id="sidebar-nav-1">
+                        <li id="dashboard" class="list-group-item">
+                            <a href="/portal/admin/default.aspx"><i class="fa fa-bar-chart-o"></i> Dashboard</a>
+                        </li>
+                        <li id="tickets" class="list-group-item">
+                            <a href="/portal/admin/tickets.aspx"><i class="fa fa-ticket"></i> Tickets</a>
+                        </li>
+                        <li id="clients" class="list-group-item">
+                            <a href="/portal/admin/clients.aspx"><i class="fa fa-institution"></i> Clients</a>
+                        </li>  
+                        <li id="surveygroups" class="list-group-item">
+                            <a href="/portal/admin/surveygroups.aspx"><i class="fa fa-group"></i> Groups</a>
+                        </li>    
+                        <li id="surveys" class="list-group-item">
+                            <a href="/portal/admin/surveys.aspx"><i class="fa fa-pencil-square"></i> Surveys</a>
+                        </li>       
+                        <li id="reports" class="list-group-item">
+                            <a href="/portal/admin/reports/default.aspx"><i class="fa fa-bar-chart-o"></i> Reports</a>
+                        </li>       
+                        <li id="emails" class="list-group-item">
+                            <a href="/portal/admin/emails.aspx"><i class="fa fa-envelope"></i> Emails & Notifications</a>
+                        </li>                                                          
+                        <li class="list-group-item">
+                            <a href="/portal/logout.aspx"><i class="fa  fa-sign-out"></i> Log Out</a>
+                        </li>
+                    </ul>             
+
+                    <!--Datepicker-->                   
+                    <div class="margin-bottom-25" id="inline-start"></div>                  
+                    <!--End Datepicker-->       
+                  
+                    
+                    
+                 
+                </div>
+                <!--End Left Sidebar-->
+                
+                <div id="maincontent" class="col-xs-9">                    
+                    <div id="ctl00_ctl00_cphcontent_popMessageDiv"></div>
+                    <div id="sessionTimeoutWarning" style="display: none"></div>
+                    
+
+
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">    	
+        <div class="animated fadeInLeft padding-left-5">
+            <h1 style="display:inline"><i class="fa fa-bar-chart-o"></i><span> Dashboard</span> </h1>
+        </div>        
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+ 
+
+     
+    <div class="profile-body">    
+
+        <span id="ctl00_ctl00_cphcontent_cphcontent_lblMessage" class="margin-bottom-25"></span>
+   
+
+        <div class="row">
+            <!--Alert-->
+            <div class="col-xs-12 margin-bottom-30">
+                <h3><i class="fa fa-ticket"></i> Tickets <a href="tickets.aspx" class="btn-auto rounded pull-right">View All</a></h3>
+                <div class="panel panel-profile">
+                    <div id="scrollbar3" class="panel-body contentHolder">
+                        
+                                <div class="alert-blocks alert-blocks-new alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=40a9f448-14a5-4946-b97d-29c0a12b48ed&fileID=f3f2d246-7c6c-41be-870f-7978f98eb2a3' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2523"><strong class="color-new">Long Beach Community College District - Ticket 2523 - New</a><small class="pull-right"><em> 13 business days ago</em></small></strong> 
+                                        <p>01. Has the Long Beach Community College District disclosed any quarterly/monthly financial information to outside parties?
+The annual 2023-24 CCFS-311 financial report was presented to the Board on October 9, 2024.  The report was also submitted to the Chancellor’s Office by the October 10, 2024 deadline.  The report is attached.</p>
+                                    </div>    
+                                </div>
+                            
+                                <div class="alert-blocks alert-blocks-new alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=4dc809bf-6dd1-4a0b-afe8-3f71880fb05c&fileID=d3848f07-c9cd-4c53-8578-d70fd2092550' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2522"><strong class="color-new">Sulphur Springs Union School District - Ticket 2522 - New</a><small class="pull-right"><em> 13 business days ago</em></small></strong> 
+                                        <p>08. Has the Sulphur Springs Union School District executed any bond calls or tender offers?
+Sulphur Springs issued bonds against CFD 2019-1. </p>
+                                    </div>    
+                                </div>
+                            
+                                <div class="alert-blocks alert-blocks-new alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=d0878424-5120-4ba5-912c-34dee9b8bcb2&fileID=0f74ab1c-ae68-4850-b0af-ae2f008bdbc4' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2521"><strong class="color-new">Academy Charter School - Ticket 2521 - New</a><small class="pull-right"><em> 14 business days ago</em></small></strong> 
+                                        <p>Have you completed the Annual Financial Information and Operating data for your debt issuance(s)?
+2023-2024 Audited Financial Statements</p>
+                                    </div>    
+                                </div>
+                            
+                                <div class="alert-blocks alert-blocks-closed alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=40a9f448-14a5-4946-b97d-29c0a12b48ed&fileID=f3f2d246-7c6c-41be-870f-7978f98eb2a3' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2520"><strong class="color-closed">Long Beach Community College District - Ticket 2520 - Closed</a><small class="pull-right"><em> 36 business days ago</em></small></strong> 
+                                        <p>07. Has the Long Beach Community College District approved annual adopted or tentative budget??
+The 2024-25 Adopted Budget was approved by the Board at their meeting on September 11, 2024.  The Adopted Budget is attached.</p>
+                                    </div>    
+                                </div>
+                            
+                                <div class="alert-blocks alert-blocks-closed alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=88eb1839-5ecd-48d6-aad0-56d5981977b5&fileID=eb2033f2-6c6f-4a78-adfe-1ff079b4ffee' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2519"><strong class="color-closed">Val Verde Unified School District - Ticket 2519 - Closed</a><small class="pull-right"><em> 36 business days ago</em></small></strong> 
+                                        <p>06. Has the Val Verde Unified School District prepared any interim budget reports, additional financial information or operating data?
+Our Unaudited Actuals report was approved by our Board of Education at the September 10 regular board meeting.</p>
+                                    </div>    
+                                </div>
+                            
+                                <div class="alert-blocks alert-blocks-closed alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=60f11cdc-86fc-44d2-92cf-10595e5f165e&fileID=ff180f71-be27-4f85-b383-65c5818de024' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2518"><strong class="color-closed">Fullerton School District - Ticket 2518 - Closed</a><small class="pull-right"><em> 36 business days ago</em></small></strong> 
+                                        <p>06. Has the Fullerton School District prepared any interim budget reports, additional financial information or operating data?
+Yes. Unaudited actuals were presented at the 9/17/2024 Board Meeting</p>
+                                    </div>    
+                                </div>
+                            
+                                <div class="alert-blocks alert-blocks-closed alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=60f11cdc-86fc-44d2-92cf-10595e5f165e&fileID=ff180f71-be27-4f85-b383-65c5818de024' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2517"><strong class="color-closed">Fullerton School District - Ticket 2517 - Closed</a><small class="pull-right"><em> 36 business days ago</em></small></strong> 
+                                        <p>01. Has the Fullerton School District disclosed any quarterly/monthly financial information to outside parties?
+Yes. Unaudited Actuals were presented at the 9/17/2024 Board Meeting</p>
+                                    </div>    
+                                </div>
+                            
+                                <div class="alert-blocks alert-blocks-closed alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=4dc809bf-6dd1-4a0b-afe8-3f71880fb05c&fileID=d3848f07-c9cd-4c53-8578-d70fd2092550' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2516"><strong class="color-closed">Sulphur Springs Union School District - Ticket 2516 - Closed</a><small class="pull-right"><em> 36 business days ago</em></small></strong> 
+                                        <p>06. Has the Sulphur Springs Union School District prepared any interim budget reports, additional financial information or operating data?
+The Unaudited Actuals was presented to the Board in September. </p>
+                                    </div>    
+                                </div>
+                            
+                                <div class="alert-blocks alert-blocks-closed alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=173a8b73-5c0d-4ebc-b999-26e2cd2fea49&fileID=0a17a0ea-3c4e-45bf-bc3b-54a9e8f53a08' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2515"><strong class="color-closed">Escondido Union High School District - Ticket 2515 - Closed</a><small class="pull-right"><em> 51 business days ago</em></small></strong> 
+                                        <p>06. Has the Escondido Union High School District prepared any interim budget reports, additional financial information or operating data?
+EUHSD approved their Unaudited Actuals at their 9-10-24 Board Meeting</p>
+                                    </div>    
+                                </div>
+                            
+                                <div class="alert-blocks alert-blocks-closed alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>                                             
+                                    <img class="rounded-x" src='/handler/ImageHandler.ashx?mw=40&mh=40&clientID=173a8b73-5c0d-4ebc-b999-26e2cd2fea49&fileID=0a17a0ea-3c4e-45bf-bc3b-54a9e8f53a08' />
+                                    <div class="overflow-h">
+                                        <a href="ticket.aspx?ticketid=2514"><strong class="color-closed">Escondido Union High School District - Ticket 2514 - Closed</a><small class="pull-right"><em> 51 business days ago</em></small></strong> 
+                                        <p>01. Has the Escondido Union High School District disclosed any quarterly/monthly financial information to outside parties?
+EUHSD approved their Unaudited Actuals at their 9-10-24 Board Meeting</p>
+                                    </div>    
+                                </div>
+                            
+                          
+                    </div>
+                </div>
+            </div>
+            <!--End Alert-->
+        </div><!--/end row-->      
+
+
+        <!-- Begin Client Section -->
+        <h3><i class="fa fa-institution"></i> Clients <a href="clients.aspx" class="btn-auto rounded pull-right">View All</a></h3>
+        <script id="dxis_1728130124" src="/DXR.axd?r=1_171,1_94,1_164,1_104,1_138,1_114,1_121,1_108,1_113,1_91,1_156,1_154,1_116,1_152-wI6ef" type="text/javascript"></script><table class="dxgvControl dxdatatable rounded" cellspacing="0" cellpadding="0" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients" style="border-collapse:collapse;border-collapse:separate;">
+	<tr>
+		<td><table id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXMainTable" class="dxgvTable" cellspacing="0" cellpadding="0" onclick="aspxGVTableClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;, event);" style="width:100%;border-collapse:collapse;empty-cells:show;">
+			<tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXHeadersRow0">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_col0" class="dxgvHeader" onmousedown="aspxGVHeaderMouseDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;, this, event);" style="width:40%;border-top-width:0px;border-left-width:0px;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+					<tr>
+						<td>Client Name</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</table></td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_col1" class="dxgvHeader" onmousedown="aspxGVHeaderMouseDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;, this, event);" style="width:25%;border-top-width:0px;border-left-width:0px;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+					<tr>
+						<td>Address 1</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</table></td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_col2" class="dxgvHeader" onmousedown="aspxGVHeaderMouseDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;, this, event);" style="width:25%;border-top-width:0px;border-left-width:0px;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+					<tr>
+						<td>Address 2</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</table></td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_col3" class="dxgvHeader" onmousedown="aspxGVHeaderMouseDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;, this, event);" style="width:100px;border-top-width:0px;border-left-width:0px;border-right-width:0px;"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+					<tr>
+						<td>Status</td><td style="width:1px;text-align:right;"><span class="dx-vam">&nbsp;</span></td>
+					</tr>
+				</table></td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFilterRow" class="dxgvFilterRow">
+				<td class="dxgv"><table class="dxeTextBoxSys dxeTextBox" cellspacing="0" cellpadding="0" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0" style="width:100%;border-collapse:collapse;">
+					<tr>
+						<td class="dxic" style="width:100%;"><input class="dxeEditArea dxeEditAreaSys" name="ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol0" onkeyup="aspxEKeyUp(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0&#39;, event)" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0_I" onchange="aspxEValueChanged(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0&#39;)" onblur="aspxELostFocus(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0&#39;)" onfocus="aspxEGotFocus(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0&#39;)" type="text" onkeydown="aspxEKeyDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0&#39;, event)" /></td>
+					</tr>
+				</table><script id="dxss_1911778138" type="text/javascript">
+<!--
+aspxAddDisabledItems('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0',[[['dxeDisabled'],[''],['','I']]]);
+
+var dxo = new ASPxClientTextBox('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0');
+window['ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol0'] = dxo;
+dxo.uniqueID = 'ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol0';
+dxo.ValueChanged.AddHandler(function(s, event) { aspxGVFilterChanged('ctl00_ctl00_cphcontent_cphcontent_dxgvClients',s); });
+dxo.KeyDown.AddHandler(function(s, event) { aspxGVFilterKeyPress('ctl00_ctl00_cphcontent_cphcontent_dxgvClients',s,event); });
+dxo.RequireStyleDecoration();
+dxo.styleDecoration.AddStyle('F','dxeFocused','');
+dxo.AfterCreate();
+
+//-->
+</script></td><td class="dxgv"><table class="dxeTextBoxSys dxeTextBox" cellspacing="0" cellpadding="0" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1" style="width:100%;border-collapse:collapse;">
+					<tr>
+						<td class="dxic" style="width:100%;"><input class="dxeEditArea dxeEditAreaSys" name="ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol1" onkeyup="aspxEKeyUp(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1&#39;, event)" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1_I" onchange="aspxEValueChanged(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1&#39;)" onblur="aspxELostFocus(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1&#39;)" onfocus="aspxEGotFocus(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1&#39;)" type="text" onkeydown="aspxEKeyDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1&#39;, event)" /></td>
+					</tr>
+				</table><script id="dxss_1209136966" type="text/javascript">
+<!--
+aspxAddDisabledItems('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1',[[['dxeDisabled'],[''],['','I']]]);
+
+var dxo = new ASPxClientTextBox('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1');
+window['ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol1'] = dxo;
+dxo.uniqueID = 'ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol1';
+dxo.ValueChanged.AddHandler(function(s, event) { aspxGVFilterChanged('ctl00_ctl00_cphcontent_cphcontent_dxgvClients',s); });
+dxo.KeyDown.AddHandler(function(s, event) { aspxGVFilterKeyPress('ctl00_ctl00_cphcontent_cphcontent_dxgvClients',s,event); });
+dxo.RequireStyleDecoration();
+dxo.styleDecoration.AddStyle('F','dxeFocused','');
+dxo.AfterCreate();
+
+//-->
+</script></td><td class="dxgv"><table class="dxeTextBoxSys dxeTextBox" cellspacing="0" cellpadding="0" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2" style="width:100%;border-collapse:collapse;">
+					<tr>
+						<td class="dxic" style="width:100%;"><input class="dxeEditArea dxeEditAreaSys" name="ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol2" onkeyup="aspxEKeyUp(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2&#39;, event)" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2_I" onchange="aspxEValueChanged(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2&#39;)" onblur="aspxELostFocus(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2&#39;)" onfocus="aspxEGotFocus(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2&#39;)" type="text" onkeydown="aspxEKeyDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2&#39;, event)" /></td>
+					</tr>
+				</table><script id="dxss_229002854" type="text/javascript">
+<!--
+aspxAddDisabledItems('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2',[[['dxeDisabled'],[''],['','I']]]);
+
+var dxo = new ASPxClientTextBox('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2');
+window['ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol2'] = dxo;
+dxo.uniqueID = 'ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol2';
+dxo.ValueChanged.AddHandler(function(s, event) { aspxGVFilterChanged('ctl00_ctl00_cphcontent_cphcontent_dxgvClients',s); });
+dxo.KeyDown.AddHandler(function(s, event) { aspxGVFilterKeyPress('ctl00_ctl00_cphcontent_cphcontent_dxgvClients',s,event); });
+dxo.RequireStyleDecoration();
+dxo.styleDecoration.AddStyle('F','dxeFocused','');
+dxo.AfterCreate();
+
+//-->
+</script></td><td class="dxgv" style="text-align:Center;border-right-width:0px;"><table id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_LP" class="dxeLoadingPanel dxlpLoadingPanel" cellspacing="0" cellpadding="0" style="border-collapse:collapse;left:0px;top:0px;z-index:30000;display:none;">
+					<tr>
+						<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_15-wI6ef" alt="" align="middle" /></td><td class="dx" style="padding-left:0px;"><span id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_TL">Loading&hellip;</span></td>
+					</tr>
+				</table><div id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_LD" class="dxeLoadingDiv dxlpLoadingDiv dx-ft" style="left:0px;top:0px;z-index:29999;display:none;position:absolute;">
+
+				</div><table class="dxeButtonEditSys dxeButtonEdit" cellspacing="1" cellpadding="0" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3" style="width:100%;">
+					<tr>
+						<td style="display:none;"><input id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_VI" name="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_VI" type="hidden" /></td><td class="dxic" onmousedown="return aspxDDDropDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3&#39;, event)" style="width:100%;"><input class="dxeEditArea dxeEditAreaSys" name="ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol3" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_I" onchange="aspxETextChanged(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3&#39;)" onblur="aspxELostFocus(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3&#39;)" onfocus="aspxEGotFocus(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3&#39;)" type="text" onkeydown="aspxEKeyDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3&#39;, event)" readonly="readonly" style="cursor:default;" /></td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_B-1" class="dxeButton dxeButtonEditButton" onmousedown="return aspxDDDropDown(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3&#39;, event)" style="-khtml-user-select:none;"><img id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_B-1Img" class="dxEditors_edtDropDown" src="/DXR.axd?r=1_15-wI6ef" alt="v" /></td>
+					</tr>
+				</table><input type="hidden" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDDWS" name="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDDWS" value="0:0:-1:-10000:-10000:0:-10000:-10000:1:0:0:0" /><div id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_PW-1" class="dxpcDropDown dxpclW dxpc-ddSys" style="width:0px;cursor:default;z-index:10000;display:none;">
+					<div class="dxpc-mainDiv dxpc-shadow">
+						<div class="dxpc-contentWrapper">
+							<div class="dxpc-content">
+								<input type="hidden" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_LDeletedItems" name="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_LDeletedItems" value="" /><input type="hidden" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_LInsertedItems" name="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_LInsertedItems" value="" /><input type="hidden" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_LCustomCallback" name="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_LCustomCallback" value="" /><table class="dxeListBox" cellspacing="0" cellpadding="0" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_L" style="border-collapse:collapse;border-collapse:separate;">
+									<tr>
+										<td valign="top"><div id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_L_D" class="dxlbd" style="width:100%;overflow-x:hidden;overflow-y:auto;">
+											<input id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_L_VI" type="hidden" name="ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol3$DDD$L" /><table cellspacing="0" cellpadding="0" style="border-collapse:collapse;border-collapse:separate;visibility:hidden!important;display:none!important;">
+												<tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_L_LBI-1" class="dxeListBoxItemRow">
+													<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_L_LBII" class="dxeListBoxItem">&nbsp;</td>
+												</tr>
+											</table><table id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_L_LBT" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+												<tr class="dxeListBoxItemRow">
+													<td class="dxeListBoxItem">&nbsp;</td>
+												</tr><tr class="dxeListBoxItemRow">
+													<td class="dxeListBoxItem">Checked</td>
+												</tr><tr class="dxeListBoxItemRow">
+													<td class="dxeListBoxItem">Unchecked</td>
+												</tr>
+											</table>
+										</div></td>
+									</tr>
+								</table><script id="dxss_935362084" type="text/javascript">
+<!--
+aspxAddDisabledItems('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_L',[[['dxeDisabled'],[''],['']]]);
+
+var dxo = new ASPxClientListBox('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_L');
+window['ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD_L'] = dxo;
+dxo.uniqueID = 'ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol3$DDD$L';
+dxo.SelectedIndexChanged.AddHandler(function (s, e) { aspxCBLBSelectedIndexChanged('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3', e); });
+dxo.ItemClick.AddHandler(function (s, e) { aspxCBLBItemMouseUp('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3', e); });
+dxo.RequireStyleDecoration();
+dxo.styleDecoration.AddStyle('F','dxeFocused','');
+dxo.savedSelectedIndex = 0;
+dxo.itemsValue=[null,true,false];
+dxo.isComboBoxList = true;
+dxo.hasSampleItem = true;
+dxo.hoverClasses=['dxeListBoxItemHover'];
+dxo.selectedClasses=['dxeListBoxItemSelected'];
+dxo.disabledClasses=['dxeDisabled'];
+dxo.emptyTextRowCellIndices=[[0,[0]]];
+dxo.AfterCreate();
+
+//-->
+</script>
+							</div>
+						</div>
+					</div>
+				</div><script id="dxss_1256304459" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD',[[['dxpc-closeBtnHover'],[''],['HCB-1']]]);
+
+var dxo = new ASPxClientPopupControl('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD');
+window['ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_DDD'] = dxo;
+dxo.uniqueID = 'ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol3$DDD';
+dxo.Shown.AddHandler(function (s, e) { aspxDDBPCShown('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3', e); });
+dxo.adjustInnerControlsSizeOnShow=false;
+dxo.popupAnimationType='slide';
+dxo.closeAction='CloseButton';
+dxo.popupHorizontalAlign='LeftSides';
+dxo.popupVerticalAlign='Below';
+dxo.isPopupPositionCorrectionOn=false;
+dxo.width=0;
+dxo.height=0;
+dxo.AfterCreate();
+
+//-->
+</script><script id="dxss_2074323869" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3',[[['dxeButtonEditButtonHover'],[''],['B-1']]]);
+aspxAddPressedItems('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3',[[['dxeButtonEditButtonPressed'],[''],['B-1']]]);
+aspxAddDisabledItems('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3',[[['dxeDisabled'],[''],['','I']],[['dxeDisabled dxeButtonDisabled'],[''],['B-1'],,[[{'spriteCssClass':'dxEditors_edtDropDownDisabled'}]],['Img']]]);
+document.getElementById("ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3_I").setAttribute("autocomplete", "off");
+
+var dxo = new ASPxClientComboBox('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3');
+window['ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3'] = dxo;
+dxo.callBack = function(arg) { WebForm_DoCallback('ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol3',arg,aspxCallback,'ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXFREditorcol3',aspxCallbackError,true); };
+dxo.uniqueID = 'ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXFREditorcol3';
+dxo.ValueChanged.AddHandler(function(s, event) { aspxGVFilterChanged('ctl00_ctl00_cphcontent_cphcontent_dxgvClients',s); });
+dxo.KeyDown.AddHandler(function(s, event) { aspxGVFilterSpecKeyPress('ctl00_ctl00_cphcontent_cphcontent_dxgvClients', s, event); });
+dxo.RequireStyleDecoration();
+dxo.styleDecoration.AddStyle('F','dxeFocused','');
+dxo.lastSuccessValue = null;
+dxo.islastSuccessValueInit = true;
+dxo.AfterCreate();
+
+//-->
+</script></td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow0" class="dxgvDataRow">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell0_0" class="dxgv">
+                        <a href='client.aspx?clientid=43db4163-9f04-4571-bfed-eefb2889b9a6'>AA Tam Demo</a>
+                    </td><td class="dxgv">123 No Where</td><td class="dxgv">Corona CA</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell0_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-success">Active</span>
+                    </td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow1" class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell1_0" class="dxgv">
+                        <a href='client.aspx?clientid=5f05d9c7-bbb2-4e49-aa46-054fb7fbea3b'>AAA Unified School District</a>
+                    </td><td class="dxgv">1234 Main St</td><td class="dxgv">Miami FL</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell1_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-danger">Inactive</span>
+                    </td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow2" class="dxgvDataRow">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell2_0" class="dxgv">
+                        <a href='client.aspx?clientid=d0878424-5120-4ba5-912c-34dee9b8bcb2'>Academy Charter School</a>
+                    </td><td class="dxgv">1551 Prairie Hawk Drive</td><td class="dxgv">Castle Rock  CO</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell2_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-success">Active</span>
+                    </td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow3" class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell3_0" class="dxgv">
+                        <a href='client.aspx?clientid=3354929d-0d28-4b7d-a2d4-861091cf00b0'>Addenbrooke Classical Academy</a>
+                    </td><td class="dxgv">3940 S. Teller Street</td><td class="dxgv">Lakewood CO</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell3_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-danger">Inactive</span>
+                    </td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow4" class="dxgvDataRow">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell4_0" class="dxgv">
+                        <a href='client.aspx?clientid=09d32d1f-9d44-42aa-aef0-834cbd1ec3e2'>Adelanto School District</a>
+                    </td><td class="dxgv">11824 Air Expressway</td><td class="dxgv">Adelanto CA</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell4_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-danger">Inactive</span>
+                    </td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow5" class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell5_0" class="dxgv">
+                        <a href='client.aspx?clientid=aad70ecc-4435-4db3-821f-c7ee640be4f2'>Alum Rock Union Elementary School District</a>
+                    </td><td class="dxgv">2930 Gay Avenue</td><td class="dxgv">San Jose CA</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell5_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-danger">Inactive</span>
+                    </td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow6" class="dxgvDataRow">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell6_0" class="dxgv">
+                        <a href='client.aspx?clientid=59c2d64c-7afa-490f-ba73-a6e6f81d9210'>Alview-Dairyland Union School District</a>
+                    </td><td class="dxgv">12861 Avenue 18 1/2</td><td class="dxgv">Chowchilla CA</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell6_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-danger">Inactive</span>
+                    </td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow7" class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell7_0" class="dxgv">
+                        <a href='client.aspx?clientid=86a6e34a-01b3-4627-a3fd-b5d0d9e2f2da'>Alvord Unified School District</a>
+                    </td><td class="dxgv">10365 Keller Avenue</td><td class="dxgv">Riverside CA</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell7_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-danger">Inactive</span>
+                    </td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow8" class="dxgvDataRow">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell8_0" class="dxgv">
+                        <a href='client.aspx?clientid=c4338be1-dab7-43c7-a7c1-a368227b1827'>Anaheim City School District</a>
+                    </td><td class="dxgv">1001 S East Street</td><td class="dxgv">Anaheim CA</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell8_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-danger">Inactive</span>
+                    </td>
+			</tr><tr id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXDataRow9" class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell9_0" class="dxgv">
+                        <a href='client.aspx?clientid=5179a7af-0645-4f28-b7bc-8df15e2ad384'>Anaheim Union High School District</a>
+                    </td><td class="dxgv">501 Crescent Way</td><td class="dxgv">Anaheim CA</td><td id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_tccell9_3" class="dxgv" align="center" style="border-right-width:0px;">                            
+                        <span class="label rounded-2x label-danger">Inactive</span>
+                    </td>
+			</tr>
+		</table><img id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_IADD" class="dxGridView_gvDragAndDropArrowDown" src="/DXR.axd?r=1_15-wI6ef" alt="|" style="position:absolute;visibility:hidden;top:-100px;" /><img id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_IADU" class="dxGridView_gvDragAndDropArrowUp" src="/DXR.axd?r=1_15-wI6ef" alt="|" style="position:absolute;visibility:hidden;top:-100px;" /><img id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_IDHF" class="dxGridView_gvDragAndDropHideColumn" src="/DXR.axd?r=1_15-wI6ef" alt="Hide" style="position:absolute;visibility:hidden;top:-100px;" /><div class="dxgvPagerBottomPanel">
+			<div class="dxpLite" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXPagerBottom">
+				<b class="dxp-lead dxp-summary">Page 1 of 92 (919 items)</b><b class="dxp-button dxp-bi dxp-disabledButton"><img class="dxWeb_pPrevDisabled" src="/DXR.axd?r=1_15-wI6ef" alt="Prev" /></b><b class="dxp-num dxp-current">[1]</b><a class="dxp-num" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PN1&#39;);">2</a><a class="dxp-num" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PN2&#39;);">3</a><a class="dxp-num" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PN3&#39;);">4</a><a class="dxp-num" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PN4&#39;);">5</a><a class="dxp-num" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PN5&#39;);">6</a><a class="dxp-num" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PN6&#39;);">7</a><b class="dxp-ellip">&hellip;</b><a class="dxp-num" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PN89&#39;);">90</a><a class="dxp-num" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PN90&#39;);">91</a><a class="dxp-num" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PN91&#39;);">92</a><a class="dxp-button dxp-bi" onclick="aspxGVPagerOnClick(&#39;ctl00_ctl00_cphcontent_cphcontent_dxgvClients&#39;,&#39;PBN&#39;);"><img class="dxWeb_pNext" src="/DXR.axd?r=1_15-wI6ef" alt="Next" /></a>
+			</div><b class="dx-clear"></b><script id="dxss_683458024" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientPager('ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXPagerBottom');
+window['ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXPagerBottom'] = dxo;
+dxo.uniqueID = 'ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXPagerBottom';
+dxo.hasOwnerControl=true;
+dxo.pageSizeItems = [{'text':'10','value':'10'},{'text':'20','value':'20'},{'text':'50','value':'50'},{'text':'100','value':'100'},{'text':'200','value':'200'}];
+dxo.pageSizeSelectedItem = ({'text':'10','value':10});
+dxo.pageSizeChangedHandler.AddHandler(function(s, e) { aspxGVPagerOnClick('ctl00_ctl00_cphcontent_cphcontent_dxgvClients',e.value); });
+dxo.AfterCreate();
+
+//-->
+</script>
+		</div><table id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_LP" class="dxgvLoadingPanel" cellspacing="0" cellpadding="0" style="border-collapse:collapse;left:0px;top:0px;z-index:30000;display:none;">
+			<tr>
+				<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_15-wI6ef" alt="" align="middle" /></td><td class="dx" style="padding-left:0px;"><span id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_TL">Loading&hellip;</span></td>
+			</tr>
+		</table><div id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_LD" class="dxgvLoadingDiv" style="display:none;z-index:29999;position:absolute;">
+
+		</div><input type="hidden" name="ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXSelInput" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXSelInput" /><input type="hidden" name="ctl00$ctl00$cphcontent$cphcontent$dxgvClients$DXKVInput" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXKVInput" value="[&#39;43db4163-9f04-4571-bfed-eefb2889b9a6&#39;,&#39;5f05d9c7-bbb2-4e49-aa46-054fb7fbea3b&#39;,&#39;d0878424-5120-4ba5-912c-34dee9b8bcb2&#39;,&#39;3354929d-0d28-4b7d-a2d4-861091cf00b0&#39;,&#39;09d32d1f-9d44-42aa-aef0-834cbd1ec3e2&#39;,&#39;aad70ecc-4435-4db3-821f-c7ee640be4f2&#39;,&#39;59c2d64c-7afa-490f-ba73-a6e6f81d9210&#39;,&#39;86a6e34a-01b3-4627-a3fd-b5d0d9e2f2da&#39;,&#39;c4338be1-dab7-43c7-a7c1-a368227b1827&#39;,&#39;5179a7af-0645-4f28-b7bc-8df15e2ad384&#39;]" /><table id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_DXStyleTable" style="display:none;">
+			<tr>
+				<td></td>
+			</tr><tr class="dxgvEditingErrorRow">
+				<td class="dxgv" colspan="4" style="border-right-width:0px;"></td>
+			</tr><tr class="dxgvSelectedRow">
+				<td></td>
+			</tr><tr class="dxgvFocusedRow">
+				<td></td>
+			</tr><tr class="dxgvFocusedGroupRow">
+				<td></td>
+			</tr><tr>
+				<td class="dxgvBatchEditCell dxgv"></td><td class="dxgvBatchEditModifiedCell dxgv"></td><td class="dxgvBatchEditCell dxgvBatchEditModifiedCell dxgv"></td>
+			</tr><tr class="dxgvDataRow">
+				<td></td>
+			</tr><tr class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td></td>
+			</tr><tr class="dxgvDataRow">
+				<td></td>
+			</tr><tr class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td></td>
+			</tr><tr class="dxgvDataRow">
+				<td></td>
+			</tr><tr class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td></td>
+			</tr><tr class="dxgvDataRow">
+				<td></td>
+			</tr><tr class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td></td>
+			</tr><tr class="dxgvDataRow">
+				<td></td>
+			</tr><tr class="dxgvDataRow dxgvDataRowAlt alternate">
+				<td></td>
+			</tr>
+		</table><input type="hidden" name="ctl00$ctl00$cphcontent$cphcontent$dxgvClients$CallbackState" id="ctl00_ctl00_cphcontent_cphcontent_dxgvClients_CallbackState" value="BwMHAgIERGF0YQaABAAAAACXAwAAlwMAAAAAAAAKAAAAAAUAAAAIQ2xpZW50SUQJQ2xpZW50IElECwAACkNsaWVudE5hbWULQ2xpZW50IE5hbWUHAAAISXNBY3RpdmUJSXMgQWN0aXZlCgAACEFkZHJlc3MxCEFkZHJlc3MxBwAACEFkZHJlc3MyCEFkZHJlc3MyBwAABwAAAAdBZGRyZXNzBENpdHkLU3RhdGVBYmJyZXYKUG9zdGFsQ29kZQdXZWJzaXRlCkxvZ29GaWxlSUQLTGFzdFVwZGF0ZWQHAAcABwAHAAb//wsCY0HbQwSfcUW/7e77KIm5pgcCC0FBIFRhbSBEZW1vCgIBBwIMMTIzIE5vIFdoZXJlBwIJQ29yb25hIENBBwAHAAb//wsCx9kFX7K7SU6qRgVPt/vqOwcCG0FBQSBVbmlmaWVkIFNjaG9vbCBEaXN0cmljdAoCAAcCDDEyMzQgTWFpbiBTdAcCCE1pYW1pIEZMBwAHAAb//wsCJISH0CBRpUuRLDTe6bi8sgcCFkFjYWRlbXkgQ2hhcnRlciBTY2hvb2wKAgEHAhcxNTUxIFByYWlyaWUgSGF3ayBEcml2ZQcCD0Nhc3RsZSBSb2NrICBDTwcABwAG//8LAp2SVDMoDX1LotSGEJHPALAHAh1BZGRlbmJyb29rZSBDbGFzc2ljYWwgQWNhZGVteQoCAAcCFTM5NDAgUy4gVGVsbGVyIFN0cmVldAcCC0xha2V3b29kIENPBwAHAAb//wsCHy3TCUSdqkKu8INMvR7D4gcCGEFkZWxhbnRvIFNjaG9vbCBEaXN0cmljdAoCAAcCFDExODI0IEFpciBFeHByZXNzd2F5BwILQWRlbGFudG8gQ0EHAAcABv//CwLMDteqNUSzTYIfx+5kC+TyBwIqQWx1bSBSb2NrIFVuaW9uIEVsZW1lbnRhcnkgU2Nob29sIERpc3RyaWN0CgIABwIPMjkzMCBHYXkgQXZlbnVlBwILU2FuIEpvc2UgQ0EHAAcABv//CwJM1sJZ+noPSbpzpub4HZIQBwImQWx2aWV3LURhaXJ5bGFuZCBVbmlvbiBTY2hvb2wgRGlzdHJpY3QKAgAHAhMxMjg2MSBBdmVudWUgMTggMS8yBwINQ2hvd2NoaWxsYSBDQQcABwAG//8LAkrjpoazASdGo/210Nni8toHAh5BbHZvcmQgVW5pZmllZCBTY2hvb2wgRGlzdHJpY3QKAgAHAhMxMDM2NSBLZWxsZXIgQXZlbnVlBwIMUml2ZXJzaWRlIENBBwAHAAb//wsC4YszxLfax0OnwaNoInsYJwcCHEFuYWhlaW0gQ2l0eSBTY2hvb2wgRGlzdHJpY3QKAgAHAhIxMDAxIFMgRWFzdCBTdHJlZXQHAgpBbmFoZWltIENBBwAHAAb//wsCr6d5UUUGKE+3vI3xXirThAcCIkFuYWhlaW0gVW5pb24gSGlnaCBTY2hvb2wgRGlzdHJpY3QKAgAHAhA1MDEgQ3Jlc2NlbnQgV2F5BwIKQW5haGVpbSBDQQIFU3RhdGUHVAcEBwACAQcBAgEHAgIBBwMCAQcABwAHAAcAAgAFAAAAgAkCCENsaWVudElEBwECCENsaWVudElECwkCAAIAAwcEAgAHAAIBBpcDBwACAQcABwAHAAINU2hvd0ZpbHRlclJvdwoCAQ==" /></td>
+	</tr>
+</table><script id="dxss_1045859181" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientGridView('ctl00_ctl00_cphcontent_cphcontent_dxgvClients');
+window['ctl00_ctl00_cphcontent_cphcontent_dxgvClients'] = dxo;
+dxo.callBack = function(arg) { WebForm_DoCallback('ctl00$ctl00$cphcontent$cphcontent$dxgvClients',arg,aspxCallback,'ctl00_ctl00_cphcontent_cphcontent_dxgvClients',aspxCallbackError,true); };
+dxo.uniqueID = 'ctl00$ctl00$cphcontent$cphcontent$dxgvClients';
+dxo.callBacksEnabled=true;
+dxo.pageRowCount=10;
+dxo.pageRowSize=10;
+dxo.pageIndex=0;
+dxo.pageCount=92;
+dxo.selectedWithoutPageRowCount=0;
+dxo.filteredSelectedWithoutPageRowCount=0;
+dxo.visibleStartIndex=0;
+dxo.focusedRowIndex=-1;
+dxo.allowFocusedRow=false;
+dxo.allowSelectByRowClick=false;
+dxo.allowSelectSingleRowOnly=false;
+dxo.allowMultiColumnAutoFilter=false;
+dxo.indentColumnCount=0;
+dxo.callbackOnFocusedRowChanged=false;
+dxo.callbackOnSelectionChanged=false;
+dxo.autoFilterDelay='1200';
+dxo.columns = [new ASPxClientGridViewColumn('',0,-1,'ClientName',1,'',0,1,1,1,0,0,0),
+new ASPxClientGridViewColumn('',1,-1,'Address1',1,'',0,1,1,1,0,0,0),
+new ASPxClientGridViewColumn('',2,-1,'Address2',1,'',0,1,1,1,0,0,0),
+new ASPxClientGridViewColumn('',3,-1,'IsActive',1,'',0,1,1,1,0,0,0)];
+dxo.editState=0;
+dxo.editMode=0;
+dxo.AfterCreate();
+
+//-->
+</script>
+        
+        <!-- End Client Section -->
+    </div>
+
+
+                </div>
+            </div><!--/end row-->
+        </div><!--/container-->    
+    </div>		
+    <!--=== End Profile ===-->
+
+
+
+
+        <!--=== Copyright ===-->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">                     
+                        <p>
+                            &nbsp;2024 &copy; Disclosure Compliance. ALL Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6">  
+                        <p>                        
+                        <i class="fa fa-phone"></i> Phone: 1.855.453.3119  &nbsp;                    
+                        <i class="fa fa-envelope"></i> Email: <a href="mailto:info@disclosurecompliance.com">info@disclosurecompliance.com</a>  &nbsp;                        
+                        </p>
+                    </div>
+                    <div class="col-md-2">  
+                        <a href="index.html">
+                            <img class="pull-right" id="logo-footer" src="/assets/img/logo/logotiny.png" alt="Disclosure Compliance">
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div><!--/copyright--> 
+        <!--=== End Copyright ===-->
+
+    </div><!--/wrapper-->
+
+
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=tvlKf-h44chikIGXwTjwJjMMd6ZyKRl-TJSdMl151yhwa3ewxqZVfhg8Mrh5ydtm8TqMKGRrH54mrvoPoOUG-pFATg03BvyKXK4DsUd70fY1&t=638563127773552689';
+WebForm_InitCallback();
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+
+    <!-- JS Global Compulsory -->           
+    <script type="text/javascript" src="/assets/plugins/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+    <!-- Datepicker Form -->
+    <script type="text/javascript" src="/assets/plugins/sky-forms/version-2.0.1/js/jquery-ui.min.js"></script>
+
+    <!-- JS Page Level -->           
+    <script type="text/javascript" src="/assets/js/pages/index.js"></script>
+    <script type="text/javascript" src="/assets/js/plugins/datepicker.js"></script>
+
+    
+    
+    <script>
+        jQuery(document).ready(function ($) {
+            "use strict";
+            $('.contentHolder').perfectScrollbar();
+        });
+    </script>
+ 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#dashboard").addClass("active");
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            Datepicker.initDatepicker();
+        });
+    </script>
+
+    <script type="text/javascript" src="/assets/plugins/scrollbar/src/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="/assets/plugins/scrollbar/src/perfect-scrollbar.js"></script>
+
+    <script type="text/javascript" src="/assets/js/jquery.ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.timeout/jquery.idletimer.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.timeout/jquery.timeout.js"></script>   
+    <script type="text/javascript">
+        //Override the timeout default path
+        var redirectTo = '/Portal/logout.aspx'; // URL to relocate the user to once they have timed out
+        var keepAliveURL = '/Portal/keepalive.aspx'; // URL to call to keep the session alive    
+    </script>
+
+
+</body>
+</html>
