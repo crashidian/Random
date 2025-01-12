@@ -152,12 +152,12 @@ def main():
         
         # 4. Physical Components Analysis
         physical_cols = df.columns[[31, 33, 35, 37, 44]]
-        create_radar_plot(df, physical_cols, 'Physical Components Analysis\nAssessment of Physical Attributes', 'physical_radar.png', colors=physical_colors)
+        create_radar_plot(df, physical_cols, 'Physical Components Analysis\nEvaluation of Importance of Each Physical Component', 'physical_radar.png', colors=physical_colors)
         print("Created physical components radar plot")
         
         # 5. Cyber Components Analysis
         cyber_cols = df.columns[46:52]
-        create_radar_plot(df, cyber_cols, 'Cyber Components Analysis\nAssessment of Cyber Attributes', 'cyber_radar.png', is_binary=True, colors=cyber_colors)
+        create_radar_plot(df, cyber_cols, 'Cyber Components Analysis\nEvaluation of Importance of Each Cyber Component', 'cyber_radar.png', is_binary=True, colors=cyber_colors)
         print("Created cyber components radar plot")
         
         print("\nAnalysis complete. All files saved to output directory.")
