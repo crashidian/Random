@@ -2,11 +2,11 @@ import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-from nltk import pos_tag
-from collections import Counter
+from nltk import pos_tag, ne_chunk
+from collections import Counter, defaultdict
 import nltk
 import re
 
@@ -15,8 +15,58 @@ nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
 nltk.download('wordnet', quiet=True)
 nltk.download('averaged_perceptron_tagger', quiet=True)
+nltk.download('maxent_ne_chunker', quiet=True)
+nltk.download('words', quiet=True)
+
+class RequirementAnalyzer:
+    def __init__(self):
+        # Define requirement categories and their associated keywords
+        self.requirement_categories = {
+            'hardware': ['sensor', 'camera', 'radar', 'lidar', 'hardware', 'device', 'equipment', 
+                        'computing', 'processor', 'gpu', 'system', 'interface', 'screen', 'display'],
+            'software': ['software', 'program', 'application', 'platform', 'system', 'interface', 
+                        'api', 'algorithm', 'model', 'simulation', 'framework'],
+            'data': ['data', 'dataset', 'information', 'measurement', 'recording', 'sample', 
+                    'collection', 'storage', 'database', 'stream', 'feed'],
+            'infrastructure': ['network', 'connection', 'infrastructure', 'facility', 'environment', 
+                             'space', 'area', 'room', 'field', 'setup', 'installation'],
+            'performance': ['speed', 'accuracy', 'precision', 'resolution', 'quality', 'performance', 
+                          'efficiency', 'reliability', 'robustness', 'capability'],
+            'integration': ['integration', 'compatibility', 'interface', 'connection', 'communication', 
+                          'interaction', 'synchronization', 'coordination'],
+            'operational': ['operation', 'procedure', 'process', 'workflow', 'protocol', 'standard', 
+                          'requirement', 'specification', 'guideline']
+        }
+        
+        # Keywords indicating requirements
+        self.requirement_indicators = [
+            'need', 'require', 'must', 'should', 'want', 'necessary', 'essential', 'important',
+            'critical', 'crucial', 'specific', 'particular', 'custom', 'precise'
+        ]
+
+    def extract_requirements(self, text):
+        if pd.isna(text):
+            return {}
+        
+        text = str(text).lower()
+        sentences = sent_tokenize(text)
+        requirements = defaultdict(list)
+        
+        for sentence in sentences:
+            # Check if sentence contains requirement indicators
+            if any(indicator in sentence for indicator in self.requirement_indicators):
+                # Categorize the requirement
+                for category, keywords in self.requirement_categories.items():
+                    if any(keyword in sentence for keyword in keywords):
+                        requirements[category].append(sentence.strip())
+        
+        return requirements
 
 def preprocess_text(text):
+    """
+    Preprocess text by removing special characters, converting to lowercase,
+    and lemmatizing words
+    """
     if pd.isna(text):
         return ""
     
@@ -34,6 +84,9 @@ def preprocess_text(text):
     return ' '.join(tokens)
 
 def extract_key_phrases(texts, n_topics=3, n_words=8):
+    """
+    Extract key themes using Latent Dirichlet Allocation
+    """
     vectorizer = TfidfVectorizer(
         max_features=1000,
         stop_words='english',
@@ -65,6 +118,9 @@ def extract_key_phrases(texts, n_topics=3, n_words=8):
         return [f"Error in theme extraction: {str(e)}"]
 
 def analyze_patterns(texts):
+    """
+    Analyze common patterns in the texts
+    """
     all_words = []
     bigrams = []
     key_phrases = []
@@ -91,12 +147,37 @@ def analyze_patterns(texts):
         'key_phrases': Counter(key_phrases).most_common(10)
     }
 
+def analyze_needs(responses):
+    """
+    Analyze and summarize needs from responses
+    """
+    analyzer = RequirementAnalyzer()
+    all_requirements = defaultdict(list)
+    
+    for response in responses:
+        if pd.isna(response):
+            continue
+        
+        requirements = analyzer.extract_requirements(response)
+        for category, reqs in requirements.items():
+            all_requirements[category].extend(reqs)
+    
+    # Summarize requirements
+    summary = {}
+    for category, reqs in all_requirements.items():
+        if reqs:
+            # Remove duplicates while preserving order
+            unique_reqs = list(dict.fromkeys(reqs))
+            summary[category] = unique_reqs
+    
+    return summary
+
 def main():
     try:
         # Read the CSV file
         df = pd.read_csv(r"C:\Users\me\OneDrive\Documents\RCODI\AIDA3\UseCaseSurvey.csv")
         
-        # Define the columns to analyze (using exact column names from the CSV)
+        # Define the columns to analyze
         columns_to_analyze = [
             'How would you like to use PURT remotely? Do you have specific requirements concerning such an UAS indoor motion capture lab? Do you have specific requirements with respect to emulating certain communication and networking conditions or other real-world environmental conditions (e.g. GNSS signal degradation, wind, urban canyons, etc.)?',
             'How would you like to use the SOC? (e.g. Do you have any specific requirements in terms of sensors? Do you have any specific requirements in terms of VR/AR technologies? How large is the team size you want to work with? Do you have specific requirements in terms of sensors to perform research using real-time sensing of human cognition (e.g. eyetracking etc.) and brain-computer interfaces and neuro-inspired human-robot-interaction (e.g. biofeedback, neurofeedback)? What requirements do you have with respect to our motion-capture systems and cameras?)',
@@ -107,44 +188,42 @@ def main():
             'How would you like to use a digital twin? Do have a specific physical system in mind for which you need high fidelity simulation models? How would you like to use such digital twins (e.g. simulations and counterfactual reasoning etc.)'
         ]
 
-        # Strip whitespace from column names in DataFrame
+        # Strip whitespace from column names
         df.columns = df.columns.str.strip()
-        
-        # Strip whitespace from our target column names
         columns_to_analyze = [col.strip() for col in columns_to_analyze]
         
-        # Verify columns exist
+        # Analyze each column
         for column in columns_to_analyze:
             print(f"\nAnalyzing responses for: {column}")
             print("-" * 50)
             
-            # Get non-null responses
             if column in df.columns:
                 responses = df[column].dropna().astype(str)
                 if len(responses) == 0:
                     print("No responses found for this question")
                     continue
                 
-                # Preprocess texts
-                processed_texts = [preprocess_text(text) for text in responses]
+                # Extract and analyze needs
+                print("\nIdentified Needs and Requirements:")
+                needs_summary = analyze_needs(responses)
+                for category, requirements in needs_summary.items():
+                    print(f"\n{category.title()} Requirements:")
+                    for req in requirements:
+                        print(f"- {req}")
                 
                 # Extract themes
                 print("\nKey Themes:")
+                processed_texts = [preprocess_text(text) for text in responses]
                 themes = extract_key_phrases(processed_texts)
                 for theme in themes:
                     print(theme)
                 
                 # Analyze patterns
-                print("\nCommon Patterns:")
                 patterns = analyze_patterns(responses)
                 
                 print("\nMost Common Terms:")
                 for word, count in patterns['common_words']:
                     print(f"- {word}: {count} occurrences")
-                
-                print("\nCommon Phrases:")
-                for phrase, count in patterns['common_bigrams']:
-                    print(f"- {phrase}: {count} occurrences")
                 
                 print("\n" + "="*80 + "\n")
             else:
