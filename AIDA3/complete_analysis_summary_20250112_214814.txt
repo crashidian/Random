@@ -1,0 +1,359 @@
+================================================================================
+Analysis for: How would you like to use PURT remotely? Do you have specific requirements concerning such an UAS indoor motion capture lab? Do you have specific requirements with respect to emulating certain communication and networking conditions or other real-world environmental conditions (e.g. GNSS signal degradation, wind, urban canyons, etc.)?
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Infrastructure Requirements:
+- we plan to use this facility to evaluate signal degradation from swarm uavs for real-time disaster mapping under varying wind, precipitation and temperatures.
+- flight data under various aero-environment conditions.
+
+Operational Requirements:
+- so the remote capbility allows the most qualified individual to perform the operation efficiently.
+
+Data Requirements:
+- flight data under various aero-environment conditions.
+- i'll probably use purt to test how the model performs on real data
+- the data collected to correlate physical positions, other sensing data, and human control data will be useful to develop the simulation model for decision support
+
+Software Requirements:
+- i'll probably use purt to test how the model performs on real data
+- the data collected to correlate physical positions, other sensing data, and human control data will be useful to develop the simulation model for decision support
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: use, data, purt, use purt, signal degradation, signal, degradation, gnss signal
+Theme 2: likely, condition, autonomy condition, help visualizing, visualizing, visualizing autonomy, autonomy, help
+Theme 3: nb iot, nb, ocean, ocean radio, radio nb, radio, iot, distance
+
+COMMON TERMS
+--------------------------------------------------
+- data: 5 occurrences
+- use: 3 occurrences
+- remote: 3 occurrences
+- purt: 2 occurrences
+- signal: 2 occurrences
+- degradation: 2 occurrences
+- above: 2 occurrences
+- distance: 2 occurrences
+- oceans: 2 occurrences
+- radio: 2 occurrences
+
+================================================================================
+Analysis for: How would you like to use the SOC? (e.g. Do you have any specific requirements in terms of sensors? Do you have any specific requirements in terms of VR/AR technologies? How large is the team size you want to work with? Do you have specific requirements in terms of sensors to perform research using real-time sensing of human cognition (e.g. eyetracking etc.) and brain-computer interfaces and neuro-inspired human-robot-interaction (e.g. biofeedback, neurofeedback)? What requirements do you have with respect to our motion-capture systems and cameras?)
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Software Requirements:
+- we would like to study human robot teaming with mobile robotic platforms.
+- i would like to use the soc to perform human operator integration and refine the autonomous model to emulate the human decisionmaking until the system is fully autnomous.
+- i would use the soc to test and enhance high-resolution object detection models for uavs in simulated real-world environments, such as search and rescue missions and precision agriculture.
+- i require high-resolution cameras, lidar, and thermal sensors to test the model's performance in multi-modal and challenging conditions, such as low light or occlusion.
+- the motion capture system could track uav movements and operator gestures, enabling analysis of human-robot interaction and the accuracy of uav actions in simulated environments.
+- this center provides the capabilities to capture human interactions with devices, information/data, and alert system under different operating environments.
+
+Hardware Requirements:
+- i would like to use the soc to perform human operator integration and refine the autonomous model to emulate the human decisionmaking until the system is fully autnomous.
+- correlating multiple sensors - thermal, hyperspectral and visual.
+- i require high-resolution cameras, lidar, and thermal sensors to test the model's performance in multi-modal and challenging conditions, such as low light or occlusion.
+- the motion capture system could track uav movements and operator gestures, enabling analysis of human-robot interaction and the accuracy of uav actions in simulated environments.
+- this center provides the capabilities to capture human interactions with devices, information/data, and alert system under different operating environments.
+
+Integration Requirements:
+- i would like to use the soc to perform human operator integration and refine the autonomous model to emulate the human decisionmaking until the system is fully autnomous.
+- the motion capture system could track uav movements and operator gestures, enabling analysis of human-robot interaction and the accuracy of uav actions in simulated environments.
+- this center provides the capabilities to capture human interactions with devices, information/data, and alert system under different operating environments.
+
+Operational Requirements:
+- path planning and operation of uav remote sensing.
+- this will be necessary to study the human-autonomy performance and the design features needed for safe and effective operations using aavs in challenging conditions.
+
+Infrastructure Requirements:
+- i would use the soc to test and enhance high-resolution object detection models for uavs in simulated real-world environments, such as search and rescue missions and precision agriculture.
+- the motion capture system could track uav movements and operator gestures, enabling analysis of human-robot interaction and the accuracy of uav actions in simulated environments.
+- this center provides the capabilities to capture human interactions with devices, information/data, and alert system under different operating environments.
+
+Performance Requirements:
+- i would use the soc to test and enhance high-resolution object detection models for uavs in simulated real-world environments, such as search and rescue missions and precision agriculture.
+- i require high-resolution cameras, lidar, and thermal sensors to test the model's performance in multi-modal and challenging conditions, such as low light or occlusion.
+- the motion capture system could track uav movements and operator gestures, enabling analysis of human-robot interaction and the accuracy of uav actions in simulated environments.
+- this will be necessary to study the human-autonomy performance and the design features needed for safe and effective operations using aavs in challenging conditions.
+
+Data Requirements:
+- human subject study for recording neurofeedback of operators interacting with multiple agents
+- this center provides the capabilities to capture human interactions with devices, information/data, and alert system under different operating environments.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: required, required research, research, uav, vr ar, vr, interesting, interesting use
+Theme 2: human, like, used, used check, online, online approach, result online, approach
+Theme 3: workforce, use, workforce outcome, workforce need, use build, outcome, need use, need
+
+COMMON TERMS
+--------------------------------------------------
+- human: 6 occurrences
+- use: 6 occurrences
+- workforce: 4 occurrences
+- like: 3 occurrences
+- study: 3 occurrences
+- be: 3 occurrences
+- i: 3 occurrences
+- system: 3 occurrences
+- uav: 3 occurrences
+- environments: 3 occurrences
+
+================================================================================
+Analysis for: How would you like to use the PUC? What are your specific requirements in terms of motion-capture, urban infrastructures (e.g. materials, etc.)? What forms of signal degradation do you want to study and how?
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Software Requirements:
+- we plan to use puc to validate the reliability of ai models for gis elements detection and further explore the impact of signal degradation on the data collection and ai models under varying weather conditions.
+- i need to test a system of systems approach and ensure redunancy so that no loss of capbility effects the entire system and the system can be recovered quicly.
+- i envision utilizing the facility for real human-uav interactions instead of studying the interaction in the simulation environments.
+
+Data Requirements:
+- we plan to use puc to validate the reliability of ai models for gis elements detection and further explore the impact of signal degradation on the data collection and ai models under varying weather conditions.
+
+Performance Requirements:
+- we plan to use puc to validate the reliability of ai models for gis elements detection and further explore the impact of signal degradation on the data collection and ai models under varying weather conditions.
+
+Hardware Requirements:
+- i need to test a system of systems approach and ensure redunancy so that no loss of capbility effects the entire system and the system can be recovered quicly.
+- sensor correlation across modalites for the science objective.
+- it will be important to develop the capabilities and understand the limitations on gps, radar, cameras and communication networks during flights.
+
+Infrastructure Requirements:
+- the infrastructure that can mimic real-world emergency response logistics.
+- i envision utilizing the facility for real human-uav interactions instead of studying the interaction in the simulation environments.
+- it will be important to develop the capabilities and understand the limitations on gps, radar, cameras and communication networks during flights.
+
+Integration Requirements:
+- i envision utilizing the facility for real human-uav interactions instead of studying the interaction in the simulation environments.
+- it will be important to develop the capabilities and understand the limitations on gps, radar, cameras and communication networks during flights.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: sensor correlation, science objective, science, sensor, modalites, modalites science, correlation modalites, correlation
+Theme 2: scenario great, spoofing, spoofing scenario, scenario, great, motion capture, capture spoofing, capture
+Theme 3: mimic, real, interaction, rural, simulated ocean, rainy, simulated, season need
+
+COMMON TERMS
+--------------------------------------------------
+- be: 4 occurrences
+- have: 4 occurrences
+- mimic: 3 occurrences
+- need: 3 occurrences
+- i: 3 occurrences
+- system: 3 occurrences
+- gps: 2 occurrences
+- signal: 2 occurrences
+- degradation: 2 occurrences
+- puc: 2 occurrences
+
+================================================================================
+Analysis for: How would you like to use the PUP Airfield? Are there specific requirements in onsite equipment and sensors? Besides collecting ground truth data, what are data matter?
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Software Requirements:
+- we would like to test future fixed wing mr platforms
+- interested in the data collected during take off and landing for simulation models.
+
+Operational Requirements:
+- to test and optimize swarm uav operations for disaster impact assessment.
+- flight operations of uav's for earth remote sensing
+- we would like to hangar the test aircraft there when we are conducting flight test operations.
+
+Performance Requirements:
+- yes, we need to practice a drone airline capability  for heavy cargo
+
+Data Requirements:
+- interested in the data collected during take off and landing for simulation models.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: yes need, yes, practice, practice drone, drone, drone airline, capability, airline
+Theme 2: operation, uav, tbd, scoping, problem, problem scoping, tbd problem, test
+Theme 3: simulation model, simulation, landing, model, data collected, collected, collected landing, landing simulation
+
+COMMON TERMS
+--------------------------------------------------
+- test: 4 occurrences
+- operations: 3 occurrences
+- like: 2 occurrences
+- uav: 2 occurrences
+- need: 2 occurrences
+- practice: 2 occurrences
+- drone: 2 occurrences
+- airline: 2 occurrences
+- capability: 2 occurrences
+- heavy: 2 occurrences
+
+================================================================================
+Analysis for: How would you like to use our fleet? (e.g. What vehicles would you like to use and how? Do you have specific requirements in terms of onboard sensing (e.g. SAR, airborne radars, LiDAR, thermal and hyperspectral, etc) or onboard computing resources? What vehicles would you like to study and how? Do you want to bring your own vehicles?)
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Hardware Requirements:
+- our research would require uavs equipped with rgb cameras, thermal cameras, anemometers and lidar
+- mainly lidar and computer vision onboard processing.
+- we want to install a sar sensor on the windracer platform
+- i would like to use uavs equipped with high-resolution cameras, lidar, and thermal sensors to test my object detection models in real-world scenarios like search and rescue or precision agriculture.
+- onboard computing resources capable of handling high-resolution data processing would be essential.
+- we eould like to experiment different platforms and cameras to performe the real-time people identification and uav motion.
+
+Infrastructure Requirements:
+- we need to train on all for monitoring of coast and areas of crime.
+- i would also study how these vehicles perform in dynamic environments, particularly for beyond visual line of sight (bvlos) operations.
+
+Operational Requirements:
+- mainly lidar and computer vision onboard processing.
+- onboard computing resources capable of handling high-resolution data processing would be essential.
+- i would also study how these vehicles perform in dynamic environments, particularly for beyond visual line of sight (bvlos) operations.
+
+Software Requirements:
+- we want to install a sar sensor on the windracer platform
+- i would like to use uavs equipped with high-resolution cameras, lidar, and thermal sensors to test my object detection models in real-world scenarios like search and rescue or precision agriculture.
+- we eould like to experiment different platforms and cameras to performe the real-time people identification and uav motion.
+
+Performance Requirements:
+- i would like to use uavs equipped with high-resolution cameras, lidar, and thermal sensors to test my object detection models in real-world scenarios like search and rescue or precision agriculture.
+- onboard computing resources capable of handling high-resolution data processing would be essential.
+
+Data Requirements:
+- onboard computing resources capable of handling high-resolution data processing would be essential.
+- i won't be using any of the aavs directly, but interested in data collected during testing.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: train, train monitoring, need, looking vehicle, looking, monitoring, monitoring coast, crime
+Theme 2: camera, lidar, like, vision, yes like, yes, vision onboard, mainly
+Theme 3: suas, target, target suas, community target, community, vehicle, data, like
+
+COMMON TERMS
+--------------------------------------------------
+- vehicles: 7 occurrences
+- i: 5 occurrences
+- bring: 4 occurrences
+- cameras: 4 occurrences
+- like: 3 occurrences
+- lidar: 3 occurrences
+- own: 3 occurrences
+- test: 2 occurrences
+- uavs: 2 occurrences
+- equipped: 2 occurrences
+
+================================================================================
+Analysis for: How would you like to use Purdue XTM? (e.g. are their specific radar requirements? Is there a need for portable radars? What are particular requirements with respect to low altitude weather network station? Where do you want to place them?)
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Operational Requirements:
+- to test and optimize swarm uav operations for disaster impact assessment.
+- i won't be using purdue xtm, but the specifications and performance of the communication network will be of interest in development of routing and real-time response.
+
+Software Requirements:
+- we need to have simulation or use cases that are both urban and rural?
+
+Infrastructure Requirements:
+- i won't be using purdue xtm, but the specifications and performance of the communication network will be of interest in development of routing and real-time response.
+
+Performance Requirements:
+- i won't be using purdue xtm, but the specifications and performance of the communication network will be of interest in development of routing and real-time response.
+
+Integration Requirements:
+- i won't be using purdue xtm, but the specifications and performance of the communication network will be of interest in development of routing and real-time response.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: tbd, important, applicable, future, need future, current need, applicable current, current
+Theme 2: need, use, fishing fleet, fishing, urban, use case, support fishing, rural need
+Theme 3: important, tbd, assessment, operation, test, uav operation, test optimize, swarm uav
+
+COMMON TERMS
+--------------------------------------------------
+- need: 4 occurrences
+- be: 3 occurrences
+- have: 2 occurrences
+- simulation: 2 occurrences
+- use: 2 occurrences
+- cases: 2 occurrences
+- are: 2 occurrences
+- urban: 2 occurrences
+- rural: 2 occurrences
+- support: 2 occurrences
+
+================================================================================
+Analysis for: How would you like to use a digital twin? Do have a specific physical system in mind for which you need high fidelity simulation models? How would you like to use such digital twins (e.g. simulations and counterfactual reasoning etc.)
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Software Requirements:
+- we would like to test the accuracy of our existing digital twins for mobile robotics platforms.
+- they would allow me to simulate complex real-world environments and test detection models before deploying them on physical uavs.
+- this would improve the accuracy and robustness of the models by providing a realistic testing ground.
+- the ability to upload and run simulations, initiate new experiments, and extend digital models tailored to uav operations would significantly enhance the development process, saving time and resources while optimizing model performance for different scenarios.
+- for developing enhanced simulation environment were different design of feedback mechanisms, reasoning processes, and compliance protocols of the explainable ai can be tested and validated.
+- digital twin will be linked to simulation model for operational planning, routing, and real-time control for risk mitigation and cost effective operations
+
+Performance Requirements:
+- we would like to test the accuracy of our existing digital twins for mobile robotics platforms.
+- for my research on high-resolution object detection in uavs, digital twins could be highly valuable.
+- this would improve the accuracy and robustness of the models by providing a realistic testing ground.
+- the ability to upload and run simulations, initiate new experiments, and extend digital models tailored to uav operations would significantly enhance the development process, saving time and resources while optimizing model performance for different scenarios.
+
+Operational Requirements:
+- we aim to use the digital twin to simulate extreme weather conditions such as hurricanes and wild fires to estimate the impact on the swarm uav operations.
+- we need to support industrialize food processing outcomes and manage critical supporting operations of seafood processing such as water desalination and animal waste.
+- we need to optimized the  food processing for rainy seasons and dry seasons.
+- the ability to upload and run simulations, initiate new experiments, and extend digital models tailored to uav operations would significantly enhance the development process, saving time and resources while optimizing model performance for different scenarios.
+- for developing enhanced simulation environment were different design of feedback mechanisms, reasoning processes, and compliance protocols of the explainable ai can be tested and validated.
+- digital twin will be linked to simulation model for operational planning, routing, and real-time control for risk mitigation and cost effective operations
+
+Hardware Requirements:
+- we may want to simulate the sensor/environment interaction, as well as the sar sensor.
+
+Infrastructure Requirements:
+- we may want to simulate the sensor/environment interaction, as well as the sar sensor.
+- they would allow me to simulate complex real-world environments and test detection models before deploying them on physical uavs.
+- for developing enhanced simulation environment were different design of feedback mechanisms, reasoning processes, and compliance protocols of the explainable ai can be tested and validated.
+- we believe that performing experiments in simulated environment is an important step for validating our methos.
+
+Integration Requirements:
+- we may want to simulate the sensor/environment interaction, as well as the sar sensor.
+
+Data Requirements:
+- for developing enhanced simulation environment were different design of feedback mechanisms, reasoning processes, and compliance protocols of the explainable ai can be tested and validated.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: processing, digital, food, need, food processing, season, critical, aavs
+Theme 2: use, sensor, environment, rl, simulator rl, rl research, simulator, use simulator
+Theme 3: path, path planning, planning, gradual, emulation gradual, emulation, gradual deployment, various component
+
+COMMON TERMS
+--------------------------------------------------
+- digital: 12 occurrences
+- twin: 6 occurrences
+- processing: 6 occurrences
+- be: 5 occurrences
+- operations: 5 occurrences
+- development: 4 occurrences
+- need: 4 occurrences
+- food: 4 occurrences
+- critical: 4 occurrences
+- seasons: 4 occurrences

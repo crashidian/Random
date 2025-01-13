@@ -1,0 +1,55 @@
+================================================================================
+Analysis for: How would you like to use our fleet? (e.g. What vehicles would you like to use and how? Do you have specific requirements in terms of onboard sensing (e.g. SAR, airborne radars, LiDAR, thermal and hyperspectral, etc) or onboard computing resources? What vehicles would you like to study and how? Do you want to bring your own vehicles?)
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Hardware Requirements:
+- our research would require uavs equipped with rgb cameras, thermal cameras, anemometers and lidar
+- mainly lidar and computer vision onboard processing.
+- we want to install a sar sensor on the windracer platform
+- i would like to use uavs equipped with high-resolution cameras, lidar, and thermal sensors to test my object detection models in real-world scenarios like search and rescue or precision agriculture.
+- onboard computing resources capable of handling high-resolution data processing would be essential.
+- we eould like to experiment different platforms and cameras to performe the real-time people identification and uav motion.
+
+Infrastructure Requirements:
+- we need to train on all for monitoring of coast and areas of crime.
+- i would also study how these vehicles perform in dynamic environments, particularly for beyond visual line of sight (bvlos) operations.
+
+Operational Requirements:
+- mainly lidar and computer vision onboard processing.
+- onboard computing resources capable of handling high-resolution data processing would be essential.
+- i would also study how these vehicles perform in dynamic environments, particularly for beyond visual line of sight (bvlos) operations.
+
+Software Requirements:
+- we want to install a sar sensor on the windracer platform
+- i would like to use uavs equipped with high-resolution cameras, lidar, and thermal sensors to test my object detection models in real-world scenarios like search and rescue or precision agriculture.
+- we eould like to experiment different platforms and cameras to performe the real-time people identification and uav motion.
+
+Performance Requirements:
+- i would like to use uavs equipped with high-resolution cameras, lidar, and thermal sensors to test my object detection models in real-world scenarios like search and rescue or precision agriculture.
+- onboard computing resources capable of handling high-resolution data processing would be essential.
+
+Data Requirements:
+- onboard computing resources capable of handling high-resolution data processing would be essential.
+- i won't be using any of the aavs directly, but interested in data collected during testing.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: train, train monitoring, need, looking vehicle, looking, monitoring, monitoring coast, crime
+Theme 2: camera, lidar, like, vision, yes like, yes, vision onboard, mainly
+Theme 3: suas, target, target suas, community target, community, vehicle, data, like
+
+COMMON TERMS
+--------------------------------------------------
+- vehicles: 7 occurrences
+- i: 5 occurrences
+- bring: 4 occurrences
+- cameras: 4 occurrences
+- like: 3 occurrences
+- lidar: 3 occurrences
+- own: 3 occurrences
+- test: 2 occurrences
+- uavs: 2 occurrences
+- equipped: 2 occurrences

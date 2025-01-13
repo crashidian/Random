@@ -1,0 +1,41 @@
+================================================================================
+Analysis for: How would you like to use PURT remotely? Do you have specific requirements concerning such an UAS indoor motion capture lab? Do you have specific requirements with respect to emulating certain communication and networking conditions or other real-world environmental conditions (e.g. GNSS signal degradation, wind, urban canyons, etc.)?
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Infrastructure Requirements:
+- we plan to use this facility to evaluate signal degradation from swarm uavs for real-time disaster mapping under varying wind, precipitation and temperatures.
+- flight data under various aero-environment conditions.
+
+Operational Requirements:
+- so the remote capbility allows the most qualified individual to perform the operation efficiently.
+
+Data Requirements:
+- flight data under various aero-environment conditions.
+- i'll probably use purt to test how the model performs on real data
+- the data collected to correlate physical positions, other sensing data, and human control data will be useful to develop the simulation model for decision support
+
+Software Requirements:
+- i'll probably use purt to test how the model performs on real data
+- the data collected to correlate physical positions, other sensing data, and human control data will be useful to develop the simulation model for decision support
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: use, data, purt, use purt, signal degradation, signal, degradation, gnss signal
+Theme 2: likely, condition, autonomy condition, help visualizing, visualizing, visualizing autonomy, autonomy, help
+Theme 3: nb iot, nb, ocean, ocean radio, radio nb, radio, iot, distance
+
+COMMON TERMS
+--------------------------------------------------
+- data: 5 occurrences
+- use: 3 occurrences
+- remote: 3 occurrences
+- purt: 2 occurrences
+- signal: 2 occurrences
+- degradation: 2 occurrences
+- above: 2 occurrences
+- distance: 2 occurrences
+- oceans: 2 occurrences
+- radio: 2 occurrences

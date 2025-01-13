@@ -1,0 +1,41 @@
+================================================================================
+Analysis for: How would you like to use Purdue XTM? (e.g. are their specific radar requirements? Is there a need for portable radars? What are particular requirements with respect to low altitude weather network station? Where do you want to place them?)
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Operational Requirements:
+- to test and optimize swarm uav operations for disaster impact assessment.
+- i won't be using purdue xtm, but the specifications and performance of the communication network will be of interest in development of routing and real-time response.
+
+Software Requirements:
+- we need to have simulation or use cases that are both urban and rural?
+
+Infrastructure Requirements:
+- i won't be using purdue xtm, but the specifications and performance of the communication network will be of interest in development of routing and real-time response.
+
+Performance Requirements:
+- i won't be using purdue xtm, but the specifications and performance of the communication network will be of interest in development of routing and real-time response.
+
+Integration Requirements:
+- i won't be using purdue xtm, but the specifications and performance of the communication network will be of interest in development of routing and real-time response.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: tbd, important, applicable, future, need future, current need, applicable current, current
+Theme 2: need, use, fishing fleet, fishing, urban, use case, support fishing, rural need
+Theme 3: important, tbd, assessment, operation, test, uav operation, test optimize, swarm uav
+
+COMMON TERMS
+--------------------------------------------------
+- need: 4 occurrences
+- be: 3 occurrences
+- have: 2 occurrences
+- simulation: 2 occurrences
+- use: 2 occurrences
+- cases: 2 occurrences
+- are: 2 occurrences
+- urban: 2 occurrences
+- rural: 2 occurrences
+- support: 2 occurrences

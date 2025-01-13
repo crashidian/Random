@@ -1,0 +1,62 @@
+================================================================================
+Analysis for: How would you like to use a digital twin? Do have a specific physical system in mind for which you need high fidelity simulation models? How would you like to use such digital twins (e.g. simulations and counterfactual reasoning etc.)
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Software Requirements:
+- we would like to test the accuracy of our existing digital twins for mobile robotics platforms.
+- they would allow me to simulate complex real-world environments and test detection models before deploying them on physical uavs.
+- this would improve the accuracy and robustness of the models by providing a realistic testing ground.
+- the ability to upload and run simulations, initiate new experiments, and extend digital models tailored to uav operations would significantly enhance the development process, saving time and resources while optimizing model performance for different scenarios.
+- for developing enhanced simulation environment were different design of feedback mechanisms, reasoning processes, and compliance protocols of the explainable ai can be tested and validated.
+- digital twin will be linked to simulation model for operational planning, routing, and real-time control for risk mitigation and cost effective operations
+
+Performance Requirements:
+- we would like to test the accuracy of our existing digital twins for mobile robotics platforms.
+- for my research on high-resolution object detection in uavs, digital twins could be highly valuable.
+- this would improve the accuracy and robustness of the models by providing a realistic testing ground.
+- the ability to upload and run simulations, initiate new experiments, and extend digital models tailored to uav operations would significantly enhance the development process, saving time and resources while optimizing model performance for different scenarios.
+
+Operational Requirements:
+- we aim to use the digital twin to simulate extreme weather conditions such as hurricanes and wild fires to estimate the impact on the swarm uav operations.
+- we need to support industrialize food processing outcomes and manage critical supporting operations of seafood processing such as water desalination and animal waste.
+- we need to optimized the  food processing for rainy seasons and dry seasons.
+- the ability to upload and run simulations, initiate new experiments, and extend digital models tailored to uav operations would significantly enhance the development process, saving time and resources while optimizing model performance for different scenarios.
+- for developing enhanced simulation environment were different design of feedback mechanisms, reasoning processes, and compliance protocols of the explainable ai can be tested and validated.
+- digital twin will be linked to simulation model for operational planning, routing, and real-time control for risk mitigation and cost effective operations
+
+Hardware Requirements:
+- we may want to simulate the sensor/environment interaction, as well as the sar sensor.
+
+Infrastructure Requirements:
+- we may want to simulate the sensor/environment interaction, as well as the sar sensor.
+- they would allow me to simulate complex real-world environments and test detection models before deploying them on physical uavs.
+- for developing enhanced simulation environment were different design of feedback mechanisms, reasoning processes, and compliance protocols of the explainable ai can be tested and validated.
+- we believe that performing experiments in simulated environment is an important step for validating our methos.
+
+Integration Requirements:
+- we may want to simulate the sensor/environment interaction, as well as the sar sensor.
+
+Data Requirements:
+- for developing enhanced simulation environment were different design of feedback mechanisms, reasoning processes, and compliance protocols of the explainable ai can be tested and validated.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: processing, digital, food, need, food processing, season, critical, aavs
+Theme 2: use, sensor, environment, rl, simulator rl, rl research, simulator, use simulator
+Theme 3: path, path planning, planning, gradual, emulation gradual, emulation, gradual deployment, various component
+
+COMMON TERMS
+--------------------------------------------------
+- digital: 12 occurrences
+- twin: 6 occurrences
+- processing: 6 occurrences
+- be: 5 occurrences
+- operations: 5 occurrences
+- development: 4 occurrences
+- need: 4 occurrences
+- food: 4 occurrences
+- critical: 4 occurrences
+- seasons: 4 occurrences

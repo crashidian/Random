@@ -1,0 +1,40 @@
+================================================================================
+Analysis for: How would you like to use the PUP Airfield? Are there specific requirements in onsite equipment and sensors? Besides collecting ground truth data, what are data matter?
+================================================================================
+
+IDENTIFIED NEEDS AND REQUIREMENTS
+--------------------------------------------------
+
+Software Requirements:
+- we would like to test future fixed wing mr platforms
+- interested in the data collected during take off and landing for simulation models.
+
+Operational Requirements:
+- to test and optimize swarm uav operations for disaster impact assessment.
+- flight operations of uav's for earth remote sensing
+- we would like to hangar the test aircraft there when we are conducting flight test operations.
+
+Performance Requirements:
+- yes, we need to practice a drone airline capability  for heavy cargo
+
+Data Requirements:
+- interested in the data collected during take off and landing for simulation models.
+
+KEY THEMES
+--------------------------------------------------
+Theme 1: yes need, yes, practice, practice drone, drone, drone airline, capability, airline
+Theme 2: operation, uav, tbd, scoping, problem, problem scoping, tbd problem, test
+Theme 3: simulation model, simulation, landing, model, data collected, collected, collected landing, landing simulation
+
+COMMON TERMS
+--------------------------------------------------
+- test: 4 occurrences
+- operations: 3 occurrences
+- like: 2 occurrences
+- uav: 2 occurrences
+- need: 2 occurrences
+- practice: 2 occurrences
+- drone: 2 occurrences
+- airline: 2 occurrences
+- capability: 2 occurrences
+- heavy: 2 occurrences
