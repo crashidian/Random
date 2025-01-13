@@ -1,27 +1,26 @@
 import pandas as pd
 import numpy as np
-import nltk
-nltk.download('stopwords')
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-from nltk import pos_tag, ne_chunk
+from nltk import pos_tag
 from collections import Counter, defaultdict
+import nltk
 import re
+import os
+from datetime import datetime
+import traceback
 
 # Download required NLTK data
 nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
 nltk.download('wordnet', quiet=True)
 nltk.download('averaged_perceptron_tagger', quiet=True)
-nltk.download('maxent_ne_chunker', quiet=True)
-nltk.download('words', quiet=True)
 
 class RequirementAnalyzer:
     def __init__(self):
-        # Define requirement categories and their associated keywords
         self.requirement_categories = {
             'hardware': ['sensor', 'camera', 'radar', 'lidar', 'hardware', 'device', 'equipment', 
                         'computing', 'processor', 'gpu', 'system', 'interface', 'screen', 'display'],
@@ -39,7 +38,6 @@ class RequirementAnalyzer:
                           'requirement', 'specification', 'guideline']
         }
         
-        # Keywords indicating requirements
         self.requirement_indicators = [
             'need', 'require', 'must', 'should', 'want', 'necessary', 'essential', 'important',
             'critical', 'crucial', 'specific', 'particular', 'custom', 'precise'
@@ -54,9 +52,12 @@ class RequirementAnalyzer:
         requirements = defaultdict(list)
         
         for sentence in sentences:
-            # Check if sentence contains requirement indicators
             if any(indicator in sentence for indicator in self.requirement_indicators):
-                # Categorize the requirement
+                for category, keywords in self.requirement_categories.items():
+                    if any(keyword in sentence for keyword in keywords):
+                        requirements[category].append(sentence.strip())
+            else:
+                # Also check for implicit requirements (sentences with keywords but without explicit indicators)
                 for category, keywords in self.requirement_categories.items():
                     if any(keyword in sentence for keyword in keywords):
                         requirements[category].append(sentence.strip())
@@ -64,10 +65,7 @@ class RequirementAnalyzer:
         return requirements
 
 def preprocess_text(text):
-    """
-    Preprocess text by removing special characters, converting to lowercase,
-    and lemmatizing words
-    """
+    """Preprocess text by removing special characters, converting to lowercase, and lemmatizing words"""
     if pd.isna(text):
         return ""
     
@@ -85,9 +83,7 @@ def preprocess_text(text):
     return ' '.join(tokens)
 
 def extract_key_phrases(texts, n_topics=3, n_words=8):
-    """
-    Extract key themes using Latent Dirichlet Allocation
-    """
+    """Extract key themes using Latent Dirichlet Allocation"""
     vectorizer = TfidfVectorizer(
         max_features=1000,
         stop_words='english',
@@ -119,9 +115,7 @@ def extract_key_phrases(texts, n_topics=3, n_words=8):
         return [f"Error in theme extraction: {str(e)}"]
 
 def analyze_patterns(texts):
-    """
-    Analyze common patterns in the texts
-    """
+    """Analyze common patterns in the texts"""
     all_words = []
     bigrams = []
     key_phrases = []
@@ -149,9 +143,7 @@ def analyze_patterns(texts):
     }
 
 def analyze_needs(responses):
-    """
-    Analyze and summarize needs from responses
-    """
+    """Analyze and summarize needs from responses"""
     analyzer = RequirementAnalyzer()
     all_requirements = defaultdict(list)
     
@@ -167,16 +159,51 @@ def analyze_needs(responses):
     summary = {}
     for category, reqs in all_requirements.items():
         if reqs:
-            # Remove duplicates while preserving order
             unique_reqs = list(dict.fromkeys(reqs))
             summary[category] = unique_reqs
     
     return summary
 
+def write_to_file(filename, content):
+    """Write content to a file with proper encoding"""
+    filepath = os.path.join(r"C:\Users\me\OneDrive\Documents\RCODI\AIDA3", filename)
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(content)
+    return filepath
+
+def format_analysis_output(column_name, needs_summary, themes, patterns):
+    """Format the analysis results for file output"""
+    output = []
+    output.append("="*80)
+    output.append(f"Analysis for: {column_name}")
+    output.append("="*80)
+    
+    output.append("\nIDENTIFIED NEEDS AND REQUIREMENTS")
+    output.append("-"*50)
+    for category, requirements in needs_summary.items():
+        output.append(f"\n{category.title()} Requirements:")
+        for req in requirements:
+            output.append(f"- {req}")
+    
+    output.append("\nKEY THEMES")
+    output.append("-"*50)
+    for theme in themes:
+        output.append(theme)
+    
+    output.append("\nCOMMON TERMS")
+    output.append("-"*50)
+    for word, count in patterns['common_words']:
+        output.append(f"- {word}: {count} occurrences")
+    
+    return "\n".join(output)
+
 def main():
     try:
         # Read the CSV file
-        df = pd.read_csv(r"UseCaseSurvey 1.csv")
+        df = pd.read_csv(r"C:\Users\me\OneDrive\Documents\RCODI\AIDA3\UseCaseSurvey.csv")
+        
+        # Create timestamp for output files
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
         # Define the columns to analyze
         columns_to_analyze = [
@@ -193,47 +220,55 @@ def main():
         df.columns = df.columns.str.strip()
         columns_to_analyze = [col.strip() for col in columns_to_analyze]
         
+        # Create summary file for all analyses
+        summary_content = []
+        
         # Analyze each column
         for column in columns_to_analyze:
-            print(f"\nAnalyzing responses for: {column}")
-            print("-" * 50)
+            print(f"\nAnalyzing: {column[:50]}...")  # Print truncated column name
             
             if column in df.columns:
+                # Get responses and analyze them
                 responses = df[column].dropna().astype(str)
                 if len(responses) == 0:
                     print("No responses found for this question")
                     continue
                 
-                # Extract and analyze needs
-                print("\nIdentified Needs and Requirements:")
+                # Perform analyses
                 needs_summary = analyze_needs(responses)
-                for category, requirements in needs_summary.items():
-                    print(f"\n{category.title()} Requirements:")
-                    for req in requirements:
-                        print(f"- {req}")
-                
-                # Extract themes
-                print("\nKey Themes:")
                 processed_texts = [preprocess_text(text) for text in responses]
                 themes = extract_key_phrases(processed_texts)
-                for theme in themes:
-                    print(theme)
-                
-                # Analyze patterns
                 patterns = analyze_patterns(responses)
                 
-                print("\nMost Common Terms:")
-                for word, count in patterns['common_words']:
-                    print(f"- {word}: {count} occurrences")
+                # Format output
+                analysis_output = format_analysis_output(
+                    column,
+                    needs_summary,
+                    themes,
+                    patterns
+                )
                 
-                print("\n" + "="*80 + "\n")
+                # Add to summary
+                summary_content.append(analysis_output)
+                
+                # Create individual file for this analysis
+                facility_name = re.search(r'use\s+(\w+)', column)
+                filename = f"analysis_{facility_name.group(1) if facility_name else 'unnamed'}_{timestamp}.txt"
+                write_to_file(filename, analysis_output)
+                print(f"Written analysis to {filename}")
+            
             else:
                 print(f"Column not found in CSV")
+        
+        # Write combined analyses to summary file
+        summary_filename = f"complete_analysis_summary_{timestamp}.txt"
+        write_to_file(summary_filename, "\n\n".join(summary_content))
+        print(f"\nComplete analysis written to {summary_filename}")
 
     except Exception as e:
-        print(f"An error occurred: {str(e)}")
-        import traceback
-        print(traceback.format_exc())
+        error_msg = f"An error occurred: {str(e)}\n{traceback.format_exc()}"
+        print(error_msg)
+        write_to_file(f"error_log_{timestamp}.txt", error_msg)
 
 if __name__ == "__main__":
     main()
