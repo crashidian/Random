@@ -6,7 +6,7 @@ import numpy as np
 import os
 
 # Define color schemes
-physical_colors = ['#000000', '#1A3049', '#6C738B', '#A3B6CD', '#CAD6E5']
+physical_colors = ['#000000', '#1A3049', '#5C738B', '#A3B6CD', '#CAD6E5']
 cyber_colors = ['#C4BFC0', '#9D9795', '#CFB991', '#DAAA00', '#DDB945']
 
 # File paths
@@ -85,7 +85,8 @@ def create_radar_plot(data, columns, title, filename, is_binary=False, colors=No
     values_max.append(values_max[0])
     angles = np.concatenate((angles, [angles[0]]))
     
-    fig = plt.figure(figsize=(12, 8))
+    # Create figure with larger size to accommodate labels
+    fig = plt.figure(figsize=(14, 10))
     ax = fig.add_subplot(111, polar=True)
     
     # Plot data with specified colors and improved labels
@@ -107,16 +108,55 @@ def create_radar_plot(data, columns, title, filename, is_binary=False, colors=No
     labels = [label[:30] + '...' if len(label) > 30 else label for label in labels]
     ax.set_xticklabels(labels, fontsize=8)
     
+    # Add mean value labels with improved positioning
+    for i, (angle, value, label) in enumerate(zip(angles[:-1], values_mean[:-1], labels)):
+        # Calculate optimal label distance based on neighboring values
+        if is_binary:
+            base_distance = 0.3
+        else:
+            base_distance = 0.6
+            
+        # Adjust label position based on angle sector to prevent overlap
+        sector = int((angle + np.pi/2) / (np.pi/4))
+        angle_offset = 0
+        
+        if sector in [0, 7]:  # Top
+            label_distance = value + base_distance
+            va = 'bottom'
+        elif sector in [1, 2]:  # Right
+            label_distance = value + base_distance * 0.8
+            angle_offset = -0.1
+            va = 'center'
+        elif sector in [3, 4]:  # Bottom
+            label_distance = value + base_distance
+            va = 'top'
+        else:  # Left
+            label_distance = value + base_distance * 0.8
+            angle_offset = 0.1
+            va = 'center'
+        
+        # Format value text
+        if is_binary:
+            value_text = f'{value:.2f}'
+        else:
+            value_text = f'{value:.1f}'
+        
+        # Add the label with adjusted position
+        ax.text(angle + angle_offset, label_distance, value_text,
+                ha='center', va=va, fontsize=9,
+                bbox=dict(facecolor='white', alpha=0.8, edgecolor='none', pad=2))
+    
+    # Set appropriate scale
     if is_binary:
-        ax.set_ylim(0, 2)
+        ax.set_ylim(0, 2.5)  # Increased to accommodate labels
         ax.set_yticks([1, 2])
         ax.set_yticklabels(['Low', 'High'], fontsize=11)
         plt.title(f'{title}\n(Binary Scale of Low and High (Low = 1, High = 2)', y=1.05, pad=20, fontsize=14)
     else:
-        ax.set_ylim(0, 5)
+        ax.set_ylim(0, 6)  # Increased to accommodate labels
         ax.set_yticks(np.arange(1, 6))
         ax.set_yticklabels(['1', '2', '3', '4', '5'], fontsize=11)
-        plt.title(f'{title}\n(Lickert Scale of 1-5 with 1 being lowest ranking and 5 being highest ranking)', y=1.05, pad=20, fontsize=14)
+        plt.title(f'{title}\n(Likert Scale of 1-5 with 1 being lowest ranking and 5 being highest ranking)', y=1.05, pad=20, fontsize=14)
     
     # Add legend with improved positioning and labels
     legend = plt.legend(loc='center left', bbox_to_anchor=(1.25, 0.5))
@@ -152,13 +192,18 @@ def main():
         
         # 4. Physical Components Analysis
         physical_cols = df.columns[[31, 33, 35, 37, 44]]
-        create_radar_plot(df, physical_cols, 'Physical Components Analysis\nEvaluation of Importance of Each Physical Component', 'physical_radar.png', colors=physical_colors)
+        create_radar_plot(df, physical_cols, 'Physical Components Analysis\nEvaluation of Importance of Each Physical Component\n* The Mean Values are Represented Within the Chart', 'physical_radar.png', colors=physical_colors)
         print("Created physical components radar plot")
         
         # 5. Cyber Components Analysis
         cyber_cols = df.columns[46:52]
-        create_radar_plot(df, cyber_cols, 'Cyber Components Analysis\nEvaluation of Importance of Each Cyber Component', 'cyber_radar.png', is_binary=True, colors=cyber_colors)
+        create_radar_plot(df, cyber_cols, 'Cyber Components Analysis\nEvaluation of Importance of Each Cyber Component\n*The Mean Values are Represented Within the Chart', 'cyber_radar.png', is_binary=True, colors=cyber_colors)
         print("Created cyber components radar plot")
+        
+        # 6. Fleet Vehicle Types Analysis
+        fleet_cols = df.columns[[39, 40, 41, 42]]  # Columns AN, AO, AP, AQ
+        create_radar_plot(df, fleet_cols, 'Fleet Vehicle Types Analysis\nEvaluation of Importance of Each Vehicle Type\n*The Mean Values are Represented Within the Chart', 'fleet_radar.png', is_binary=True, colors=physical_colors)
+        print("Created fleet vehicle types radar plot")
         
         print("\nAnalysis complete. All files saved to output directory.")
         
