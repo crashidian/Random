@@ -9,6 +9,10 @@ import os
 physical_colors = ['#000000', '#1A3049', '#5C738B', '#A3B6CD', '#CAD6E5']
 cyber_colors = ['#C4BFC0', '#9D9795', '#CFB991', '#DAAA00', '#DDB945']
 
+# Define specific binary color schemes
+cyber_binary_colors = {'LOW': '#A3B6CD', 'HIGH': '#1A3049'}
+fleet_binary_colors = {'LOW': '#CFB991', 'HIGH': '#8B5E3C'}
+
 # File paths
 file_path = r'C:\Users\me\OneDrive\Documents\RCODI\AIDA3\UseCaseSurvey.csv'
 output_dir = r'C:\Users\me\OneDrive\Documents\RCODI\AIDA3'
@@ -45,21 +49,66 @@ def create_vertical_bar_plot(data, counts, title, filename, colors):
     plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
     plt.close()
 
-def clean_and_convert_data(data, is_binary=False):
-    """Clean and convert data to numeric values"""
-    if is_binary:
-        data = data.apply(lambda x: x.str.lower() if pd.api.types.is_string_dtype(x) else x)
-        data = data.replace({
-            'low': 1,
-            'high': 2,
-            'Low': 1,
-            'High': 2,
-            'LOW': 1,
-            'HIGH': 2
-        })
-    return pd.to_numeric(data.stack(), errors='coerce').unstack()
+def create_binary_distribution_plot(data, columns, title, filename, color_scheme):
+    """Create bar plot showing distribution of LOW/HIGH responses as percentages"""
+    # Process the data
+    processed_data = []
+    for col in columns:
+        if col in data.columns:
+            values = data[col].str.upper().value_counts()
+            total = values.sum()
+            percentages = (values / total * 100).round(1)
+            processed_data.append({
+                'category': col.split('[')[-1].split(']')[0] if '[' in col else col,
+                'LOW': percentages.get('LOW', 0),
+                'HIGH': percentages.get('HIGH', 0)
+            })
+    
+    # Create figure
+    fig, ax = plt.subplots(figsize=(12, 6))
+    
+    # Set up the bars
+    categories = [item['category'] for item in processed_data]
+    x = np.arange(len(categories))
+    width = 0.35
+    
+    # Create bars with specified colors
+    low_bars = ax.bar(x - width/2, [item['LOW'] for item in processed_data], 
+                      width, label='LOW', color=color_scheme['LOW'])
+    high_bars = ax.bar(x + width/2, [item['HIGH'] for item in processed_data], 
+                       width, label='HIGH', color=color_scheme['HIGH'])
+    
+    # Customize the plot
+    ax.set_ylabel('Percentage of Responses (%)', fontsize=12)
+    ax.set_title(title, pad=20, fontsize=14)
+    ax.set_xticks(x)
+    ax.set_xticklabels(categories, rotation=45, ha='right')
+    
+    # Add percentage labels on the bars
+    def add_labels(bars):
+        for bar in bars:
+            height = bar.get_height()
+            ax.text(bar.get_x() + bar.get_width()/2., height,
+                   f'{height:.1f}%',
+                   ha='center', va='bottom', fontsize=10)
+    
+    add_labels(low_bars)
+    add_labels(high_bars)
+    
+    # Add legend
+    ax.legend()
+    
+    # Add grid
+    ax.grid(True, axis='y', alpha=0.3)
+    
+    # Adjust layout
+    plt.subplots_adjust(bottom=0.2)
+    
+    # Save the plot
+    plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
+    plt.close()
 
-def create_radar_plot(data, columns, title, filename, is_binary=False, colors=None):
+def create_radar_plot(data, columns, title, filename, colors=None):
     """Create radar plot with mean, min, max values and proper labels"""
     if colors is None:
         colors = physical_colors
@@ -69,7 +118,7 @@ def create_radar_plot(data, columns, title, filename, is_binary=False, colors=No
         print(f"Warning: No valid columns found for {title}")
         return
     
-    data_clean = clean_and_convert_data(data[valid_cols], is_binary)
+    data_clean = pd.to_numeric(data[valid_cols].stack(), errors='coerce').unstack()
     
     means = data_clean.mean()
     mins = data_clean.min()
@@ -110,13 +159,8 @@ def create_radar_plot(data, columns, title, filename, is_binary=False, colors=No
     
     # Add mean value labels with improved positioning
     for i, (angle, value, label) in enumerate(zip(angles[:-1], values_mean[:-1], labels)):
-        # Calculate optimal label distance based on neighboring values
-        if is_binary:
-            base_distance = 0.3
-        else:
-            base_distance = 0.6
-            
-        # Adjust label position based on angle sector to prevent overlap
+        # Calculate optimal label distance and position
+        base_distance = 0.6
         sector = int((angle + np.pi/2) / (np.pi/4))
         angle_offset = 0
         
@@ -135,32 +179,20 @@ def create_radar_plot(data, columns, title, filename, is_binary=False, colors=No
             angle_offset = 0.1
             va = 'center'
         
-        # Format value text
-        if is_binary:
-            value_text = f'{value:.2f}'
-        else:
-            value_text = f'{value:.1f}'
-        
         # Add the label with adjusted position
-        ax.text(angle + angle_offset, label_distance, value_text,
+        ax.text(angle + angle_offset, label_distance, f'{value:.1f}',
                 ha='center', va=va, fontsize=9,
                 bbox=dict(facecolor='white', alpha=0.8, edgecolor='none', pad=2))
     
-    # Set appropriate scale
-    if is_binary:
-        ax.set_ylim(0, 2.5)  # Increased to accommodate labels
-        ax.set_yticks([1, 2])
-        ax.set_yticklabels(['Low', 'High'], fontsize=11)
-        plt.title(f'{title}\n(Binary Scale of Low and High (Low = 1, High = 2)', y=1.05, pad=20, fontsize=14)
-    else:
-        ax.set_ylim(0, 6)  # Increased to accommodate labels
-        ax.set_yticks(np.arange(1, 6))
-        ax.set_yticklabels(['1', '2', '3', '4', '5'], fontsize=11)
-        plt.title(f'{title}\n(Likert Scale of 1-5 with 1 being lowest ranking and 5 being highest ranking)', y=1.05, pad=20, fontsize=14)
+    ax.set_ylim(0, 6)
+    ax.set_yticks(np.arange(1, 6))
+    ax.set_yticklabels(['1', '2', '3', '4', '5'], fontsize=11)
+    plt.title(f'{title}\n(Likert Scale of 1-5 with 1 being lowest ranking and 5 being highest ranking)', 
+              y=1.05, pad=20, fontsize=14)
     
-    # Add legend with improved positioning and labels
+    # Add legend
     legend = plt.legend(loc='center left', bbox_to_anchor=(1.25, 0.5))
-    legend.set_title('Metrics' if not is_binary else 'Binary Metrics')
+    legend.set_title('Metrics')
     
     plt.subplots_adjust(right=0.8)
     plt.savefig(os.path.join(output_dir, filename), bbox_inches='tight', dpi=300)
@@ -190,20 +222,22 @@ def main():
         create_vertical_bar_plot(df, ml_counts, 'Distribution of Machine Learning Areas in AAV Use Cases', 'ml_areas.png', cyber_colors)
         print("Created ML areas plot")
         
-        # 4. Physical Components Analysis
+        # 4. Physical Components Analysis (Likert Scale)
         physical_cols = df.columns[[31, 33, 35, 37, 44]]
-        create_radar_plot(df, physical_cols, 'Physical Components Analysis\nEvaluation of Importance of Each Physical Component\n* The Mean Values are Represented Within the Chart', 'physical_radar.png', colors=physical_colors)
+        create_radar_plot(df, physical_cols, 'Physical Components Analysis\nEvaluation of Importance of Each Physical Component', 'physical_radar.png', colors=physical_colors)
         print("Created physical components radar plot")
         
-        # 5. Cyber Components Analysis
+        # 5. Cyber Components Analysis (Binary Scale - Bar Chart with Updated Colors)
         cyber_cols = df.columns[46:52]
-        create_radar_plot(df, cyber_cols, 'Cyber Components Analysis\nEvaluation of Importance of Each Cyber Component\n*The Mean Values are Represented Within the Chart', 'cyber_radar.png', is_binary=True, colors=cyber_colors)
-        print("Created cyber components radar plot")
+        create_binary_distribution_plot(df, cyber_cols, 'Cyber Components Analysis\nDistribution of Importance Ratings', 
+                                      'cyber_distribution.png', cyber_binary_colors)
+        print("Created cyber components distribution plot")
         
-        # 6. Fleet Vehicle Types Analysis
+        # 6. Fleet Vehicle Types Analysis (Binary Scale - Bar Chart with Updated Colors)
         fleet_cols = df.columns[[39, 40, 41, 42]]  # Columns AN, AO, AP, AQ
-        create_radar_plot(df, fleet_cols, 'Fleet Vehicle Types Analysis\nEvaluation of Importance of Each Vehicle Type\n*The Mean Values are Represented Within the Chart', 'fleet_radar.png', is_binary=True, colors=physical_colors)
-        print("Created fleet vehicle types radar plot")
+        create_binary_distribution_plot(df, fleet_cols, 'Fleet Vehicle Types Analysis\nDistribution of Importance Ratings', 
+                                      'fleet_distribution.png', fleet_binary_colors)
+        print("Created fleet vehicle types distribution plot")
         
         print("\nAnalysis complete. All files saved to output directory.")
         
