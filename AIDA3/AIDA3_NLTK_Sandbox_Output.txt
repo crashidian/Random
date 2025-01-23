@@ -1,0 +1,73 @@
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\me\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     C:\Users\me\AppData\Roaming\nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package maxent_ne_chunker to
+[nltk_data]     C:\Users\me\AppData\Roaming\nltk_data...
+[nltk_data]   Package maxent_ne_chunker is already up-to-date!
+[nltk_data] Downloading package words to
+[nltk_data]     C:\Users\me\AppData\Roaming\nltk_data...
+[nltk_data]   Package words is already up-to-date!
+
+Enter a sentence to analyze (or 'quit' to exit): 
+=== Syntactic Analysis ===
+
+POS Tags:
+[('I', 'PRP'), ('want', 'VBP'), ('to', 'TO'), ('go', 'VB'), ('to', 'TO'), ('Museum', 'NNP'), ('and', 'CC'), ('Sightseeing', 'NNP'), ('but', 'CC'), ('I', 'PRP'), ('have', 'VBP'), ('to', 'TO'), ('go', 'VB'), ('back', 'RB'), ('to', 'TO'), ('my', 'PRP$'), ('home', 'NN'), ('before', 'IN'), ('7', 'CD'), ('pm', 'NN')]
+
+Chunks:
+                                                             S                                                                                                 
+   __________________________________________________________|______________________________________________________________________________________________    
+  |     |     |     |      |      |     |     |       |      |      VP      VP      NP            NP          VP           VP                  NP           NP 
+  |     |     |     |      |      |     |     |       |      |      |       |       |             |           |        ____|_____         _____|_____       |   
+I/PRP to/TO to/TO and/CC but/CC I/PRP to/TO to/TO before/IN 7/CD want/VBP go/VB Museum/NNP Sightseeing/NNP have/VBP go/VB     back/RB my/PRP$     home/NN pm/NN
+
+
+Named Entities:
+                                                                        S                                                                              
+   _____________________________________________________________________|________________________________________________________________________       
+  |      |       |     |     |     |           |          |      |      |       |     |      |      |      |       |        |      |     |     PERSON  
+  |      |       |     |     |     |           |          |      |      |       |     |      |      |      |       |        |      |     |       |      
+I/PRP want/VBP to/TO go/VB to/TO and/CC Sightseeing/NNP but/CC I/PRP have/VBP to/TO go/VB back/RB to/TO my/PRP$ home/NN before/IN 7/CD pm/NN Museum/NNP
+
+
+=== Dependency Analysis ===
+                                                                       VBP                                                                         
+  ______________________________________________________________________|______                                                                     
+ |    LEFT                                                                   RIGHT                                                                 
+ |     |      _________________________________________________________________|________________________________________________________________    
+want I/PRP to/TO go/VB to/TO Museum/NNP and/CC Sightseeing/NNP but/CC I/PRP have/VBP to/TO go/VB back/RB to/TO my/PRP$ home/NN before/IN 7/CD pm/NN
+
+
+=== Semantic Analysis ===
+
+Subjects:
+  I
+  Sightseeing
+  I
+  home
+  pm
+
+Verbs:
+  want
+  go
+  have
+  go
+
+Objects:
+  Museum
+
+Modifiers:
+  back
+
+Relationships:
+  I -want-> to
+  to -go-> to
+  I -have-> to
+  to -go-> back
+
+Enter a sentence to analyze (or 'quit' to exit): The thread 'MainThread' (1) has exited with code 0 (0x0).
+The program 'python3.9.exe' has exited with code 0 (0x0).
